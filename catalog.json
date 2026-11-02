@@ -1,0 +1,55 @@
+{
+  "brand": "LUMIERE ARTS",
+  "planned_products": 6,
+  "products": [
+    {
+      "id": "01",
+      "name": "Vùng Sống 2",
+      "path": "products/01-vung-song-2",
+      "status": "v01-saved-v02-ready-for-review",
+      "saved_version": "v01-fashion-ambient",
+      "review_version": "v02-mot-chi-tiet-nhieu-dien-mao",
+      "review_video": "versions/v02-mot-chi-tiet-nhieu-dien-mao/exports/Lumiere-Arts-01-Vung-Song-2-V02-20s-1080p.mp4"
+    },
+    {
+      "id": "02",
+      "name": null,
+      "path": "products/02-chua-dat-ten",
+      "status": "awaiting-brief-and-assets",
+      "saved_version": null,
+      "review_version": null
+    },
+    {
+      "id": "03",
+      "name": null,
+      "path": "products/03-chua-dat-ten",
+      "status": "awaiting-brief-and-assets",
+      "saved_version": null,
+      "review_version": null
+    },
+    {
+      "id": "04",
+      "name": null,
+      "path": "products/04-chua-dat-ten",
+      "status": "awaiting-brief-and-assets",
+      "saved_version": null,
+      "review_version": null
+    },
+    {
+      "id": "05",
+      "name": null,
+      "path": "products/05-chua-dat-ten",
+      "status": "awaiting-brief-and-assets",
+      "saved_version": null,
+      "review_version": null
+    },
+    {
+      "id": "06",
+      "name": null,
+      "path": "products/06-chua-dat-ten",
+      "status": "awaiting-brief-and-assets",
+      "saved_version": null,
+      "review_version": null
+    }
+  ]
+}

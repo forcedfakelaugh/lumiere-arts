@@ -1,0 +1,12 @@
+{
+  "name": "lumiere-arts-vung-song-2-v02",
+  "private": true,
+  "scripts": {
+    "check": "HYPERFRAMES_NO_TELEMETRY=1 hyperframes check --at 0,1,1.2,2.5,3.5,4.6,5.5,6.5,9.2,9.65,10.1,12.7,13.5,16.5,17.6,19.9 --snapshots",
+    "preview": "HYPERFRAMES_NO_TELEMETRY=1 hyperframes preview --background",
+    "render": "HYPERFRAMES_NO_TELEMETRY=1 hyperframes render --fps 30 --quality delivery --workers 2 --video-frame-format png --output ../exports/Lumiere-Arts-01-Vung-Song-2-V02-20s-1080p.mp4"
+  },
+  "dependencies": {
+    "hyperframes": "0.8.162"
+  }
+}

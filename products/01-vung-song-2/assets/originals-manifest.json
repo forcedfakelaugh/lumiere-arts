@@ -1,0 +1,113 @@
+{
+  "note": "Original client media retained locally and excluded from Git. Working copies are included with each edit.",
+  "assets": [
+    {
+      "path": "assets/originals/2026-11-02/01-artwork/la-vung-song-2-artwork-landscape.jpg",
+      "bytes": 190965,
+      "sha256": "865a5ae75612b8c742f9a9e4bd4e8e6e30804d25609aac711570b79be6e5ea30",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/02-lookbook/la-scarf-riverside-front.jpg",
+      "bytes": 586088,
+      "sha256": "1d91ad2542094a16191dd7b1b7a116586557dad2e4709a45f00c1ea5b3798463",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/02-lookbook/la-scarf-shoulder-drape-front.jpg",
+      "bytes": 570536,
+      "sha256": "c1050ba6449643daef4acd0e35d5e3e0da6d1c0a3371342deefa86ef207b4bc3",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/02-lookbook/la-scarf-shoulder-drape-portrait.jpg",
+      "bytes": 407541,
+      "sha256": "66cb9da2e549264547c5c8943bfc9f05f47d2ad4771f6ebf32f86fc435d09900",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/02-lookbook/la-scarf-head-wrap-stairs.jpg",
+      "bytes": 611183,
+      "sha256": "3c4ed6fee3680f50baeb1505f8082fd5a03c143ac449fa30339c53eb9e41d5ed",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/02-lookbook/la-scarf-head-wrap-closeup.jpg",
+      "bytes": 686724,
+      "sha256": "bdb3eea9e290a542dda397197c0eb1c9c7767ffcca4eb99e60487258f0cf46ae",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/02-lookbook/la-scarf-back-drape-portrait.jpg",
+      "bytes": 878675,
+      "sha256": "694ee0f8dad073b39f31b50f3963f7f8f668ed45ff161c6d6d69055f566e8052",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/03-gallery/la-gallery-interior-wide.jpg",
+      "bytes": 268026,
+      "sha256": "5b4de2cc6c568576acabd166ce287635beafafffee46d9c729f2358fac57e734",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/03-gallery/la-gallery-artwork-panels.jpg",
+      "bytes": 358678,
+      "sha256": "3b65d53fd98ce3892478c3ed537d5fcf4bb9b0340a0b570d69aac22aca820298",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/03-gallery/la-gallery-viewer-artwork.jpg",
+      "bytes": 346481,
+      "sha256": "4a6602e7a6856d74755aeb4ed829d7695a471d3ad2bc28301e68001ae24b1af9",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/03-gallery/la-gallery-visitors.jpg",
+      "bytes": 422376,
+      "sha256": "8831054a363da56c341495b9e20e4c4849096bc2e0b03b5ec20b7e602c9ca8b9",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/01-artwork/la-vung-song-2-title-card-nguyen-van-trinh-2023.jpg",
+      "bytes": 504358,
+      "sha256": "e280e5505cde42297c741dd5f6518f819ae39e329bb775fd92530b8bd551b83e",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-02/04-video/la-scarf-01-unfold-front-4k.mp4",
+      "bytes": 134364417,
+      "sha256": "a13bd8b83c85e4262d686b66f8ba702e26dfdfb4586148037061361bb63992b1",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-02/04-video/la-scarf-02-shoulder-drape-4k.mp4",
+      "bytes": 134363957,
+      "sha256": "444b882ba95d8fac553cee626bd8ff3f4319bed8aece09c62be7567dc9ecffee",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-02/04-video/la-scarf-03-head-wrap-wide-4k.mp4",
+      "bytes": 134364881,
+      "sha256": "794a02d9fce60967daa7b4c76e3ee5c0a4ac211daca62ed673e11334fca70996",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-02/04-video/la-scarf-04-head-wrap-closeup-4k.mp4",
+      "bytes": 134364573,
+      "sha256": "8732debe47fb03e3a559584b719a627ea9112f87df8516315d4fcebe5112fd2b",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-02/04-video/la-scarf-05-riverside-unfold-4k.mp4",
+      "bytes": 134363801,
+      "sha256": "29d0d7c0c0710acdca5b32185a5ada2b1cac7d429bce10c44519bf608d9a9fb6",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-02/04-video/la-scarf-06-riverside-portrait-4k.mp4",
+      "bytes": 201475285,
+      "sha256": "a66688e07cff639aed15abc369db6df9e24a1b677861e616dbe5fbf70ca0fc0f",
+      "type": "video"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+# Dependencies and editor/runtime caches
+node_modules
+.DS_Store
+.hyperframes/
+.thumbnails/
+__pycache__/
+*.pyc
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated video outputs (working clips inside source/assets ARE tracked)
+exports/
+renders/
+
+# QA imagery, local traces, screenshots and temporary downloads
+**/qa/*
+!**/qa/verification.json
+!**/qa/delivery-manifest.json
+!**/qa/review-fixes.json
+!**/qa/rockot-source-validation.json
+
+# Raw 4K originals are retained locally; the edits include 1080p working clips
+/products/*/assets/originals/*
+!/products/*/assets/originals/.gitkeep
+
+# Historical demos and compatibility aliases, retained only on this Mac
+/archive/
+/client-media/
+/projects/
+/video-demo
+/file-moves.json
+/organization-2026-11-02.json
+revisions/
+
+# One-off import tools tied to the original Downloads folder
+**/scripts/inventory.cjs
+**/scripts/organize-assets.py

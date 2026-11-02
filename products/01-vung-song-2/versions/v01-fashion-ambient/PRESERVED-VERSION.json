@@ -1,0 +1,198 @@
+{
+  "version": "v01-fashion-ambient",
+  "status": "saved-baseline",
+  "saved_at": "2026-11-02T20:25:39",
+  "reason": "User requested keeping the current video before creating an alternative. This is not a statement of client final approval.",
+  "files": [
+    {
+      "path": "source/index.html",
+      "bytes": 10580,
+      "sha256": "22765ffbc45d06729b79b0adb7a7b34896ace9c44279c748f15d5835eecbe898"
+    },
+    {
+      "path": "source/package.json",
+      "bytes": 552,
+      "sha256": "83210716a3c4d3e9ca431dfbe2447ce242b79880b8b198457a158380388bdf5d"
+    },
+    {
+      "path": "source/meta.json",
+      "bytes": 79,
+      "sha256": "da96fca14b75930c4edea99c225a63deca3d265c262f90fd03ae924e18a4f0c7"
+    },
+    {
+      "path": "source/assets/cormorant-medium.woff2",
+      "bytes": 23608,
+      "sha256": "04de027ca1436893aa12810ebb5a1a262781b2e8daa16d5bd7d104f7a9e6c705"
+    },
+    {
+      "path": "source/assets/editorial-serif.woff2",
+      "bytes": 42300,
+      "sha256": "a2a741652659120e09363da738317cd9d37010f76590c98d425d1b92d7256690"
+    },
+    {
+      "path": "source/assets/gsap.min.js",
+      "bytes": 72779,
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    {
+      "path": "source/assets/images/la-gallery-artwork-panels.jpg",
+      "bytes": 358678,
+      "sha256": "3b65d53fd98ce3892478c3ed537d5fcf4bb9b0340a0b570d69aac22aca820298"
+    },
+    {
+      "path": "source/assets/images/la-gallery-interior-wide.jpg",
+      "bytes": 268026,
+      "sha256": "5b4de2cc6c568576acabd166ce287635beafafffee46d9c729f2358fac57e734"
+    },
+    {
+      "path": "source/assets/images/la-gallery-viewer-artwork.jpg",
+      "bytes": 346481,
+      "sha256": "4a6602e7a6856d74755aeb4ed829d7695a471d3ad2bc28301e68001ae24b1af9"
+    },
+    {
+      "path": "source/assets/images/la-gallery-visitors.jpg",
+      "bytes": 422376,
+      "sha256": "8831054a363da56c341495b9e20e4c4849096bc2e0b03b5ec20b7e602c9ca8b9"
+    },
+    {
+      "path": "source/assets/images/la-scarf-back-drape-portrait.jpg",
+      "bytes": 878675,
+      "sha256": "694ee0f8dad073b39f31b50f3963f7f8f668ed45ff161c6d6d69055f566e8052"
+    },
+    {
+      "path": "source/assets/images/la-scarf-head-wrap-closeup.jpg",
+      "bytes": 686724,
+      "sha256": "bdb3eea9e290a542dda397197c0eb1c9c7767ffcca4eb99e60487258f0cf46ae"
+    },
+    {
+      "path": "source/assets/images/la-scarf-head-wrap-stairs.jpg",
+      "bytes": 611183,
+      "sha256": "3c4ed6fee3680f50baeb1505f8082fd5a03c143ac449fa30339c53eb9e41d5ed"
+    },
+    {
+      "path": "source/assets/images/la-scarf-riverside-front.jpg",
+      "bytes": 586088,
+      "sha256": "1d91ad2542094a16191dd7b1b7a116586557dad2e4709a45f00c1ea5b3798463"
+    },
+    {
+      "path": "source/assets/images/la-scarf-shoulder-drape-front.jpg",
+      "bytes": 570536,
+      "sha256": "c1050ba6449643daef4acd0e35d5e3e0da6d1c0a3371342deefa86ef207b4bc3"
+    },
+    {
+      "path": "source/assets/images/la-scarf-shoulder-drape-portrait.jpg",
+      "bytes": 407541,
+      "sha256": "66cb9da2e549264547c5c8943bfc9f05f47d2ad4771f6ebf32f86fc435d09900"
+    },
+    {
+      "path": "source/assets/images/la-vung-song-2-artwork-landscape.jpg",
+      "bytes": 190965,
+      "sha256": "865a5ae75612b8c742f9a9e4bd4e8e6e30804d25609aac711570b79be6e5ea30"
+    },
+    {
+      "path": "source/assets/images/la-vung-song-2-title-card-nguyen-van-trinh-2023.jpg",
+      "bytes": 504358,
+      "sha256": "e280e5505cde42297c741dd5f6518f819ae39e329bb775fd92530b8bd551b83e"
+    },
+    {
+      "path": "source/assets/lumiere-official-logo.jpg",
+      "bytes": 14464,
+      "sha256": "b3ca8b059460935e39548479eea8ee55bb2a74a4288af74dc716b319cafa2e1f"
+    },
+    {
+      "path": "source/assets/music/apero-hour-20s-mix.wav",
+      "bytes": 3840222,
+      "sha256": "29d53f92280ea935a9be7f08344f3d2548713fe14580bfbc7f5ee559cde6e536"
+    },
+    {
+      "path": "source/assets/music/apero-hour-candidate-20s.wav",
+      "bytes": 3840222,
+      "sha256": "eb52bcf47d9f916cea319ff26189eb7fa467385b2d11e9dd890ac6d7a6a83b7c"
+    },
+    {
+      "path": "source/assets/music/dreams-become-real-20s-mix.wav",
+      "bytes": 3840248,
+      "sha256": "cc5613f8d357adcbf1a9a3e0d251f52ae0a74dec05790793ff005247cbef6e65"
+    },
+    {
+      "path": "source/assets/music/kevin-macleod-apero-hour.mp3",
+      "bytes": 9059422,
+      "sha256": "248e2bbd81c7f0bc69e4bd1ad95513e640e3eb474872acfd63b8805ed73ea9ea"
+    },
+    {
+      "path": "source/assets/music/kevin-macleod-dreams-become-real.mp3",
+      "bytes": 13124519,
+      "sha256": "a8ea5df5f969ed8d898af7fe07eb4712233f03e9d83f7ebcc88d1c851f3171b0"
+    },
+    {
+      "path": "source/assets/music/rockot-fashion-20s-mix.wav",
+      "bytes": 3840078,
+      "sha256": "7db9a5f95ad6d2467e875f4423b8d9c15b7a977c87581af43300f50f5195b262"
+    },
+    {
+      "path": "source/assets/music/rockot-fashion-selected-20s.wav",
+      "bytes": 3840078,
+      "sha256": "8f6217556ccfb7fd875f263f140553325ea51f7ca83e0234befed81a2fea8006"
+    },
+    {
+      "path": "source/assets/music/rockot-slow-motion-fashion-ambient.mp3",
+      "bytes": 3414726,
+      "sha256": "261462ffd608d0c8245ce3cbe2fc09cda668ae1a3c3f6beb5be72d5202aafde4"
+    },
+    {
+      "path": "source/assets/music/selected-excerpt.wav",
+      "bytes": 3840248,
+      "sha256": "1295c4897d6baaa5800ceb58c7ab58e13fb2d0538a1b30869d2c707cdee86bdd"
+    },
+    {
+      "path": "source/assets/video/la-scarf-01-unfold-front-1080p.mp4",
+      "bytes": 14359273,
+      "sha256": "dd14ddeec88ceb2c1fce600a7ea02ad6ccf362d972e6d89632f56a23266824e3"
+    },
+    {
+      "path": "source/assets/video/la-scarf-02-shoulder-drape-1080p.mp4",
+      "bytes": 12807166,
+      "sha256": "d12585f883cb851e0f03c8d63f760001a8671039ae4d5fba6b5ac544a784fd96"
+    },
+    {
+      "path": "source/assets/video/la-scarf-03-head-wrap-wide-1080p.mp4",
+      "bytes": 13402517,
+      "sha256": "878b754d86cf2d5cceddab7e72e330e6685e70559dd7a41c1101b454b095d195"
+    },
+    {
+      "path": "source/assets/video/la-scarf-04-head-wrap-closeup-1080p.mp4",
+      "bytes": 13449465,
+      "sha256": "709424bdf34fe2d569f383b6e07b04f5c36bf52158d8f2c41b6bd46a6f3e91b1"
+    },
+    {
+      "path": "source/assets/video/la-scarf-05-riverside-unfold-1080p.mp4",
+      "bytes": 11320454,
+      "sha256": "5a2c6be1ef8a33fab39a3b1e52d0ad40c5da960bc859c84f19ba47f9863ac9a5"
+    },
+    {
+      "path": "source/assets/video/la-scarf-06-riverside-portrait-1080p.mp4",
+      "bytes": 27759509,
+      "sha256": "4c2f57261c3a9f78ebbb4e9f3a38f4b5014d8910c6f5e6b3ed107813887eec49"
+    },
+    {
+      "path": "exports/CAPTION-AND-MUSIC-CREDIT.txt",
+      "bytes": 597,
+      "sha256": "94ac75f1966e7fa5ce861030a3f482e143c3a0fd6a1d10e19a7adc6e0483a835"
+    },
+    {
+      "path": "exports/Lumiere-Arts-Vung-Song-2-Fashion-Ambient-20s-1080p.mp4",
+      "bytes": 29098025,
+      "sha256": "6a063cf282f60bfe43f38de2112b31bff67f0d78526d24553e39e2e9aebe35ee"
+    },
+    {
+      "path": "exports/Lumiere-Arts-Vung-Song-2-Fashion-Ambient-Contact-Sheet.jpg",
+      "bytes": 225447,
+      "sha256": "afa98f144e4e87c673e42fa388e3110208670a2a090627e7ab3334d415a88832"
+    },
+    {
+      "path": "exports/Lumiere-Arts-Vung-Song-2-Fashion-Ambient-Preview-540p.mp4",
+      "bytes": 2629682,
+      "sha256": "eb8a4fd6ae3d830b4c2b3323a536e647a58b23c73d339aa0af9ed8573879903e"
+    }
+  ]
+}

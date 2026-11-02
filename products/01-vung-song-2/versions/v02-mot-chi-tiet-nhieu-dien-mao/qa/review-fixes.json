@@ -1,0 +1,19 @@
+{
+  "status": "complete-and-verified",
+  "fixes": [
+    {
+      "time": "1.1\u20133.433333",
+      "change": "C0008 source excerpt changed from 0.7\u20133.033333s to 4.2\u20136.533333s for a calmer profile/back pose at film second 3."
+    },
+    {
+      "time": "12.8\u201317.2",
+      "change": "Scarf photo crop shifted down from 41% to 52% to remove the cropped face at the upper edge."
+    }
+  ],
+  "unchanged": [
+    "music",
+    "cut timings",
+    "V01"
+  ],
+  "video_sha256": "988b53723957cb74ab2d52327a0c86431f4599253145727e95d48c3550663fda"
+}
