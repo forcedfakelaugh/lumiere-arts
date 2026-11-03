@@ -1,0 +1,12 @@
+{
+  "name": "lumiere-arts-vung-song-2-v04-chuyen-dong-lien-ket",
+  "private": true,
+  "scripts": {
+    "preview": "HYPERFRAMES_NO_TELEMETRY=1 hyperframes preview --background",
+    "check": "HYPERFRAMES_NO_TELEMETRY=1 hyperframes check --at 0,3.2,6.8,7.8,8.7,11.6,14.033333,16.466667,18.866667,22.9,23.133333,23.733333,24.333333,25,28.566667,29,31.966667 --snapshots",
+    "render": "HYPERFRAMES_NO_TELEMETRY=1 hyperframes render --fps 30 --quality delivery --workers 2 --video-frame-format png --output ../exports/Lumiere-Arts-V04-Review-32s-1080p.mp4"
+  },
+  "dependencies": {
+    "hyperframes": "0.8.162"
+  }
+}

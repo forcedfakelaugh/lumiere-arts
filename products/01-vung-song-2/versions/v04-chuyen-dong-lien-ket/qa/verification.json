@@ -1,0 +1,339 @@
+{
+  "file": "exports/Lumiere-Arts-V04-Review-32s-1080p.mp4",
+  "duration": 32.0,
+  "width": 1080,
+  "height": 1920,
+  "fps": "30/1",
+  "frames": 960,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "bytes": 36485895,
+  "sha256": "ee6aed52b36820925120d6a1a3de9d13943d8402933d18a5e0a34e7d9dbb529d",
+  "source_sha256": "c4a766f050318de50445d385ee09e599da0d01cba215a46a577e0cbd0ed3812d",
+  "decode_errors": "",
+  "black_segments": [],
+  "audio_reference_correlation": 0.9998389787507689,
+  "music": "Same original track, uninterrupted source excerpt starting at 6.6s, volume 0.8; no tempo change or splice.",
+  "transitions": [
+    {
+      "scene": "art",
+      "frame": 94,
+      "seconds": 3.1333333333333333,
+      "measured_attack_seconds": 3.1275,
+      "offset_ms": 5.833,
+      "attack_strength": 0.250253
+    },
+    {
+      "scene": "gallery",
+      "frame": 203,
+      "seconds": 6.766666666666667,
+      "measured_attack_seconds": 6.7575,
+      "offset_ms": 9.167,
+      "attack_strength": 0.238181
+    },
+    {
+      "scene": "g2",
+      "frame": 230,
+      "seconds": 7.666666666666667,
+      "measured_attack_seconds": 7.6675,
+      "offset_ms": -0.833,
+      "attack_strength": 0.313246
+    },
+    {
+      "scene": "print1",
+      "frame": 257,
+      "seconds": 8.566666666666666,
+      "measured_attack_seconds": 8.5775,
+      "offset_ms": -10.833,
+      "attack_strength": 0.201966
+    },
+    {
+      "scene": "print2",
+      "frame": 348,
+      "seconds": 11.6,
+      "measured_attack_seconds": 11.6075,
+      "offset_ms": -7.5,
+      "attack_strength": 0.290868
+    },
+    {
+      "scene": "unfold",
+      "frame": 421,
+      "seconds": 14.033333333333333,
+      "measured_attack_seconds": 14.0325,
+      "offset_ms": 0.833,
+      "attack_strength": 0.215953
+    },
+    {
+      "scene": "looks",
+      "frame": 494,
+      "seconds": 16.466666666666665,
+      "measured_attack_seconds": 16.4575,
+      "offset_ms": 9.167,
+      "attack_strength": 0.27387
+    },
+    {
+      "scene": "panel2",
+      "frame": 521,
+      "seconds": 17.366666666666667,
+      "measured_attack_seconds": 17.3675,
+      "offset_ms": -0.833,
+      "attack_strength": 0.23722
+    },
+    {
+      "scene": "panel3",
+      "frame": 566,
+      "seconds": 18.866666666666667,
+      "measured_attack_seconds": 18.8825,
+      "offset_ms": -15.833,
+      "attack_strength": 0.232354
+    },
+    {
+      "scene": "hero",
+      "frame": 712,
+      "seconds": 23.733333333333334,
+      "measured_attack_seconds": 23.7225,
+      "offset_ms": 10.833,
+      "attack_strength": 0.212791
+    },
+    {
+      "scene": "heroCopy",
+      "frame": 739,
+      "seconds": 24.633333333333333,
+      "measured_attack_seconds": 24.6375,
+      "offset_ms": -4.167,
+      "attack_strength": 0.238377
+    },
+    {
+      "scene": "closing",
+      "frame": 857,
+      "seconds": 28.566666666666666,
+      "measured_attack_seconds": 28.5775,
+      "offset_ms": -10.833,
+      "attack_strength": 0.19221
+    }
+  ],
+  "rendered_transitions": [
+    {
+      "scene": "art",
+      "frame": 94,
+      "seconds": 3.1333333333333333,
+      "measured_attack_seconds": 3.1275,
+      "offset_ms": 5.833,
+      "attack_strength": 0.250211
+    },
+    {
+      "scene": "gallery",
+      "frame": 203,
+      "seconds": 6.766666666666667,
+      "measured_attack_seconds": 6.7575,
+      "offset_ms": 9.167,
+      "attack_strength": 0.23668
+    },
+    {
+      "scene": "g2",
+      "frame": 230,
+      "seconds": 7.666666666666667,
+      "measured_attack_seconds": 7.6675,
+      "offset_ms": -0.833,
+      "attack_strength": 0.311848
+    },
+    {
+      "scene": "print1",
+      "frame": 257,
+      "seconds": 8.566666666666666,
+      "measured_attack_seconds": 8.5775,
+      "offset_ms": -10.833,
+      "attack_strength": 0.200969
+    },
+    {
+      "scene": "print2",
+      "frame": 348,
+      "seconds": 11.6,
+      "measured_attack_seconds": 11.6075,
+      "offset_ms": -7.5,
+      "attack_strength": 0.288865
+    },
+    {
+      "scene": "unfold",
+      "frame": 421,
+      "seconds": 14.033333333333333,
+      "measured_attack_seconds": 14.0325,
+      "offset_ms": 0.833,
+      "attack_strength": 0.217033
+    },
+    {
+      "scene": "looks",
+      "frame": 494,
+      "seconds": 16.466666666666665,
+      "measured_attack_seconds": 16.4575,
+      "offset_ms": 9.167,
+      "attack_strength": 0.26117
+    },
+    {
+      "scene": "panel2",
+      "frame": 521,
+      "seconds": 17.366666666666667,
+      "measured_attack_seconds": 17.3675,
+      "offset_ms": -0.833,
+      "attack_strength": 0.235354
+    },
+    {
+      "scene": "panel3",
+      "frame": 566,
+      "seconds": 18.866666666666667,
+      "measured_attack_seconds": 18.8825,
+      "offset_ms": -15.833,
+      "attack_strength": 0.232752
+    },
+    {
+      "scene": "hero",
+      "frame": 712,
+      "seconds": 23.733333333333334,
+      "measured_attack_seconds": 23.7225,
+      "offset_ms": 10.833,
+      "attack_strength": 0.209631
+    },
+    {
+      "scene": "heroCopy",
+      "frame": 739,
+      "seconds": 24.633333333333333,
+      "measured_attack_seconds": 24.6375,
+      "offset_ms": -4.167,
+      "attack_strength": 0.239577
+    },
+    {
+      "scene": "closing",
+      "frame": 857,
+      "seconds": 28.566666666666666,
+      "measured_attack_seconds": 28.5775,
+      "offset_ms": -10.833,
+      "attack_strength": 0.190335
+    }
+  ],
+  "hero_transition": {
+    "start_frame": 694,
+    "midpoint_frame": 712,
+    "end_frame": 730,
+    "start_seconds": 23.133333333333333,
+    "midpoint_seconds": 23.733333333333334,
+    "end_seconds": 24.333333333333332,
+    "duplicate_frames": 0,
+    "adjacent_frame_mean_absolute_difference": [
+      1.0743634259259258,
+      2.307773919753086,
+      1.0609085648148149,
+      2.7767650462962963,
+      2.4417438271604937,
+      4.829716435185185,
+      4.078751929012346,
+      5.944106867283951,
+      5.833863811728395,
+      6.534770447530864,
+      7.038676697530864,
+      7.660590277777778,
+      8.248842592592593,
+      8.580054012345679,
+      9.17332175925926,
+      9.493200231481481,
+      10.066936728395062,
+      10.464795524691358,
+      10.859664351851851,
+      11.235050154320987,
+      11.71460262345679,
+      12.080005787037036,
+      11.594618055555555,
+      11.300347222222221,
+      11.070264274691358,
+      10.546682098765432,
+      10.481674382716049,
+      9.95018325617284,
+      9.417872299382717,
+      8.702498070987655,
+      7.713975694444445,
+      6.947289737654321,
+      6.0871913580246915,
+      5.521363811728395,
+      4.797212577160494,
+      4.097993827160494,
+      3.837577160493827,
+      3.5163483796296298,
+      3.1588541666666665,
+      3.6144386574074074,
+      3.490596064814815
+    ]
+  },
+  "contact_sheet_frames": [
+    0,
+    135,
+    210,
+    240,
+    270,
+    360,
+    444,
+    537,
+    600,
+    700,
+    712,
+    730,
+    750,
+    882,
+    959
+  ],
+  "sampled_times": [
+    0.0,
+    4.5,
+    7.0,
+    8.0,
+    9.0,
+    12.0,
+    14.8,
+    17.9,
+    20.0,
+    23.333333333333332,
+    23.733333333333334,
+    24.333333333333332,
+    25.0,
+    29.4,
+    31.966666666666665
+  ],
+  "hero_review_frames": [
+    690,
+    693,
+    694,
+    697,
+    700,
+    703,
+    706,
+    709,
+    712,
+    715,
+    718,
+    721,
+    724,
+    727,
+    730,
+    731,
+    733,
+    739,
+    748,
+    750
+  ],
+  "closing_review_frames": [
+    844,
+    848,
+    850,
+    851,
+    853,
+    855,
+    857,
+    860,
+    863,
+    866,
+    875,
+    882,
+    900,
+    930,
+    959
+  ],
+  "visual_review": "See qa/visual-review.md after manual inspection of the current export; this script does not perform subjective visual acceptance."
+}

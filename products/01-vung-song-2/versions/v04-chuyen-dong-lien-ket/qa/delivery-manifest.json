@@ -1,0 +1,47 @@
+{
+  "round": "R3",
+  "source_sha256": "c4a766f050318de50445d385ee09e599da0d01cba215a46a577e0cbd0ed3812d",
+  "exports": [
+    {
+      "file": "exports/Lumiere-Arts-V04-Review-32s-1080p.mp4",
+      "width": 1080,
+      "height": 1920,
+      "duration": 32,
+      "fps": 30,
+      "frames": 960,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "decode_errors": "",
+      "bytes": 36485895,
+      "sha256": "ee6aed52b36820925120d6a1a3de9d13943d8402933d18a5e0a34e7d9dbb529d"
+    },
+    {
+      "file": "exports/Lumiere-Arts-V04-Review-32s-720p.mp4",
+      "width": 720,
+      "height": 1280,
+      "duration": 32,
+      "fps": 30,
+      "frames": 960,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "decode_errors": "",
+      "bytes": 9614882,
+      "sha256": "3ee60b928b16722b111e1fe8114cebcf63a312fb801b3bbc50b3f142ed69e6af"
+    },
+    {
+      "file": "exports/Lumiere-Arts-V04-Review-32s-540p.mp4",
+      "width": 540,
+      "height": 960,
+      "duration": 32,
+      "fps": 30,
+      "frames": 960,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "decode_errors": "",
+      "bytes": 5173055,
+      "sha256": "f2cb6fbe88c122b687ad13ca29598b1804ccde0de94f59b575767bfddac527b8"
+    }
+  ],
+  "desktop_copy": "/Users/lucasnguyen/Desktop/Lumiere-Arts-V04-Review-32s-720p.mp4",
+  "desktop_sha256": "3ee60b928b16722b111e1fe8114cebcf63a312fb801b3bbc50b3f142ed69e6af"
+}

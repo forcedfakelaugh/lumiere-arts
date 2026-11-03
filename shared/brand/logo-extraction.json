@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-03",
+  "tool": "built-in image_gen",
+  "mode": "background-extraction",
+  "source": "lumiere-official-logo.jpg",
+  "output": "lumiere-logo-transparent.png",
+  "transparent_background": true,
+  "prompt": "Background removal ONLY for this existing low-resolution flat brand logo. Copy the original foreground pixel artwork faithfully and make the dark teal background transparent. The original is extremely delicate, FLAT, HAIRLINE gold/copper strokes, with thin elegant serif lettering LUMIERE ARTS. Retain the thin lines exactly; do not thicken or emboss the fan or the lettering. Preserve the exact geometry, typeface, letter spacing, fan ribs, and handle. Absolutely NO 3D, NO bevel, NO metallic relief, NO texture additions, NO raised gold, NO shadow, NO glow, NO redesign, NO sharpening. Keep the original scale of the artwork within the original 340:262 canvas proportion with transparent margins. All teal areas including gaps inside letters and between the thin fan ribs must be transparent. Actual alpha background, not a checkerboard. Aim for a faithful flat cutout of the uploaded original, not a new high-resolution interpretation.",
+  "output_sha256": "6ffa31fd6148ebfd7e4a5a4b0e2a896b960060d0263e750e339fcd0ca32b5c5a",
+  "validation": {
+    "dimensions": [
+      1429,
+      1101
+    ],
+    "has_alpha": true,
+    "fully_transparent_pixels": 1472166,
+    "total_pixels": 1573329
+  },
+  "usage": "V04 Chuyển động liên kết, continuous top-center watermark and closing logo."
+}

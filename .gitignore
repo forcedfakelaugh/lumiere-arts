@@ -3,6 +3,7 @@ node_modules
 .DS_Store
 .hyperframes/
 .thumbnails/
+.playwright-cli/
 __pycache__/
 *.pyc
 *.log
