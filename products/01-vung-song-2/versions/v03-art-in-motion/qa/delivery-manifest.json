@@ -1,0 +1,30 @@
+[
+  {
+    "file": "CAPTION-AND-MUSIC-CREDIT.txt",
+    "bytes": 444,
+    "sha256": "2727778bf12f00f7b9ffafcab0ee942c1af48a1b10871c8d6c56c9314588109d"
+  },
+  {
+    "file": "Lumiere-Arts-01-Vung-Song-2-V03-24s-1080p.mp4",
+    "bytes": 35150673,
+    "sha256": "a24e9b3b24d90b1c1385125ba3186a7ef96f9232bfa63a5bc5edd6dc1502485c",
+    "duration": "24.000000",
+    "width": 1080,
+    "height": 1920,
+    "frames": "720"
+  },
+  {
+    "file": "Lumiere-Arts-01-Vung-Song-2-V03-Contact-Sheet.jpg",
+    "bytes": 312760,
+    "sha256": "7889b0506b98d8a92285e131314877921e69f89214750194ef9b270bc54ae0ff"
+  },
+  {
+    "file": "Lumiere-Arts-01-Vung-Song-2-V03-Preview-540p.mp4",
+    "bytes": 3792374,
+    "sha256": "c58eeccc387b5f831d162963cd9cb2c549f31b8895b4daed2322e564b4c5f462",
+    "duration": "24.000000",
+    "width": 540,
+    "height": 960,
+    "frames": "720"
+  }
+]

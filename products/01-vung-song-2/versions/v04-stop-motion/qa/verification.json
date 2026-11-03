@@ -1,0 +1,151 @@
+{
+  "file": "exports/Lumiere-Arts-01-Vung-Song-2-V04-Stop-Motion-20s-1080p.mp4",
+  "duration": 20,
+  "width": 1080,
+  "height": 1920,
+  "fps": "30/1",
+  "frames": 600,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "bytes": 9045962,
+  "sha256": "92d994b87f4a5420a777e8cd700c6e7e7b0b493223acb0ec3145a7db65d755d7",
+  "decode_errors": "",
+  "black_segments": [],
+  "sampled_times": [
+    0,
+    0.8,
+    1.4,
+    2.4,
+    3.4,
+    4.4,
+    5,
+    5.25,
+    5.75,
+    6.25,
+    6.75,
+    7.25,
+    7.75,
+    8.25,
+    8.75,
+    9,
+    9.4,
+    10.4,
+    11.4,
+    12.4,
+    13,
+    13.6,
+    14.5,
+    15.966667,
+    16,
+    16.4,
+    17.4,
+    18.4,
+    19.966667
+  ],
+  "photographic_poses": 19,
+  "static_foreground_masks": 8,
+  "visual_review": "Reviewed actual final MP4 contact sheet and all 29 selected pose/cut samples. Confirmed first pose is visible at frame zero after fixing initial visibility. Eight held foreground poses also pass comparison against their source pixels and between held render frames.",
+  "hyperframes_check": "0 lint/runtime/layout/motion issues across 20 sampled times; 19/19 contrast checks pass. Large occluded type is intentional.",
+  "freeze_check": "Not applicable: held photographic poses are intentional. Dedicated hold-stability verification is used instead.",
+  "hold_stability": {
+    "checked_poses": 8,
+    "max_mean_absolute_render_difference": 0.017648856239928006,
+    "foreground_rgb_matches_original": true,
+    "details": [
+      {
+        "pose": "opening-01",
+        "times": [
+          0.633333,
+          0.833333
+        ],
+        "sampled_channels": 1289088,
+        "mean_absolute_render_difference": 0.004393028249429054,
+        "foreground_rgb_source_difference": 0,
+        "mean_render_reference_difference": 2.111924088968325
+      },
+      {
+        "pose": "opening-02",
+        "times": [
+          1.633333,
+          1.833333
+        ],
+        "sampled_channels": 1175289,
+        "mean_absolute_render_difference": 0.009524465897323977,
+        "foreground_rgb_source_difference": 0,
+        "mean_render_reference_difference": 2.12536831366583
+      },
+      {
+        "pose": "opening-03",
+        "times": [
+          2.633333,
+          2.833333
+        ],
+        "sampled_channels": 1194525,
+        "mean_absolute_render_difference": 0.017648856239928006,
+        "foreground_rgb_source_difference": 0,
+        "mean_render_reference_difference": 2.1275603273267616
+      },
+      {
+        "pose": "opening-04",
+        "times": [
+          3.633333,
+          3.833333
+        ],
+        "sampled_channels": 1261014,
+        "mean_absolute_render_difference": 0.013805556480736931,
+        "foreground_rgb_source_difference": 0,
+        "mean_render_reference_difference": 2.132083386861684
+      },
+      {
+        "pose": "signature-01",
+        "times": [
+          9.633333,
+          9.833333
+        ],
+        "sampled_channels": 1243935,
+        "mean_absolute_render_difference": 2.4117015760469798e-06,
+        "foreground_rgb_source_difference": 0,
+        "mean_render_reference_difference": 2.0335515923259657
+      },
+      {
+        "pose": "signature-02",
+        "times": [
+          10.633333,
+          10.833333
+        ],
+        "sampled_channels": 1118439,
+        "mean_absolute_render_difference": 0.009913817382977525,
+        "foreground_rgb_source_difference": 0,
+        "mean_render_reference_difference": 2.0676541143504474
+      },
+      {
+        "pose": "signature-03",
+        "times": [
+          11.633333,
+          11.833333
+        ],
+        "sampled_channels": 1195554,
+        "mean_absolute_render_difference": 0.010296481798396392,
+        "foreground_rgb_source_difference": 0,
+        "mean_render_reference_difference": 2.082299084775761
+      },
+      {
+        "pose": "signature-04",
+        "times": [
+          12.633333,
+          12.833333
+        ],
+        "sampled_channels": 996975,
+        "mean_absolute_render_difference": 0.006716316858496953,
+        "foreground_rgb_source_difference": 0,
+        "mean_render_reference_difference": 2.1123528674239576
+      }
+    ]
+  },
+  "audio_measured": {
+    "integrated_lufs": -16.6,
+    "true_peak_dbfs": -2.2,
+    "loudness_range_lu": 8.3
+  },
+  "known_limit": "Style uses held photographs extracted from footage; it is not newly photographed physical stop-motion."
+}

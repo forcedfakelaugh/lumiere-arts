@@ -1,0 +1,34 @@
+[
+  {
+    "id": "opening",
+    "file": "la-scarf-06-riverside-portrait-1080p.mp4",
+    "start": 1,
+    "duration": 6,
+    "film_start": 0,
+    "mask": true
+  },
+  {
+    "id": "gesture",
+    "file": "la-scarf-03-head-wrap-wide-1080p.mp4",
+    "start": 2.2,
+    "duration": 4,
+    "film_start": 6,
+    "mask": false
+  },
+  {
+    "id": "signature",
+    "file": "la-scarf-02-shoulder-drape-1080p.mp4",
+    "start": 1,
+    "duration": 4,
+    "film_start": 10,
+    "mask": true
+  },
+  {
+    "id": "closing",
+    "file": "la-scarf-06-riverside-portrait-1080p.mp4",
+    "start": 9.5,
+    "duration": 6,
+    "film_start": 18,
+    "mask": false
+  }
+]

@@ -6,10 +6,12 @@
       "id": "01",
       "name": "Vùng Sống 2",
       "path": "products/01-vung-song-2",
-      "status": "v01-saved-v02-ready-for-review",
+      "status": "v04-chuyen-dong-lien-ket-client-review-32s",
       "saved_version": "v01-fashion-ambient",
-      "review_version": "v02-mot-chi-tiet-nhieu-dien-mao",
-      "review_video": "versions/v02-mot-chi-tiet-nhieu-dien-mao/exports/Lumiere-Arts-01-Vung-Song-2-V02-20s-1080p.mp4"
+      "review_version": "v04-chuyen-dong-lien-ket",
+      "review_video": "versions/v04-chuyen-dong-lien-ket/exports/Lumiere-Arts-V04-Review-32s-1080p.mp4",
+      "previous_review_version": "v03-art-in-motion",
+      "previous_review_feedback": "User reported masking artifacts in V03 and requested stop-motion."
     },
     {
       "id": "02",

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><title>Lumiere Arts | Vùng Sống 2 | Nhịp riêng</title>
+<link rel="icon" href="data:,">
+<script src="assets/gsap.min.js"></script>
+<style>
+@font-face{font-family:Editorial;src:url('assets/editorial-serif.woff2')}
+@font-face{font-family:Cormorant;src:url('assets/cormorant-medium.woff2')}
+*{box-sizing:border-box}html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#153b3e}
+body{font-family:Editorial,serif;color:#fff7e6}h1,h2,p{margin:0;font-weight:400}
+#film{position:relative;width:1080px;height:1920px;overflow:hidden}
+.scene{position:absolute;inset:0;overflow:hidden;opacity:0}
+.footage{position:absolute;inset:0;width:1080px;height:1920px;object-fit:cover}
+.brand{position:absolute;left:74px;top:131px;font:500 30px Cormorant,serif;letter-spacing:5px}
+.edition{position:absolute;right:74px;top:137px;font:400 20px Arial,sans-serif;letter-spacing:3.4px}
+.eyebrow{font:400 22px Arial,sans-serif;letter-spacing:4px}
+.fine-rule{height:1px;background:currentColor;opacity:.5;transform-origin:left}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,34,37,.38),transparent 24%,transparent 65%,rgba(8,34,37,.62))}
+#opening{opacity:1}
+#opening-copy{position:absolute;left:74px;top:1470px;font-size:82px;line-height:1.04;letter-spacing:-1px}
+#opening-bottom{position:absolute;left:78px;top:1713px;font:400 21px Arial,sans-serif;letter-spacing:3px}
+#opening-no{position:absolute;right:68px;top:1578px;font-size:128px;line-height:1}
+#opening-rule{position:absolute;left:78px;top:1671px;width:74px}
+#gesture .shade{background:linear-gradient(180deg,rgba(8,34,37,.35),transparent 25%,transparent 54%,rgba(8,34,37,.74))}
+#gesture-title{position:absolute;left:72px;top:1430px;font-size:97px;line-height:1.04;letter-spacing:-1.5px}
+#gesture-index{position:absolute;left:78px;top:1708px}
+#signature-note{position:absolute;left:76px;top:1576px;font-size:77px;letter-spacing:-1px}
+#signature-label{position:absolute;left:80px;top:1708px}
+#origin{background:#f1ecdf;color:#173c40}
+#origin .edition{color:#6b604c}
+#origin-kicker{position:absolute;left:76px;top:285px;color:#766348}
+#origin-heading{position:absolute;left:69px;top:339px;font-size:103px;letter-spacing:-2px;line-height:1.05}
+#art-frame{position:absolute;left:72px;top:551px;width:936px;height:430.384px;overflow:hidden}
+#art-frame img{width:100%;height:100%;object-fit:contain}
+#origin-title{position:absolute;left:72px;top:1025px;font-size:62px;line-height:1}
+#origin-artist{position:absolute;right:74px;top:1047px;font:400 25px Arial,sans-serif;letter-spacing:.8px}
+#origin-rule{position:absolute;left:74px;top:1129px;width:932px;background:#8e7754;opacity:.6}
+#origin-explanation{position:absolute;left:74px;top:1169px;font-size:38px;line-height:1.2}
+#silk-frame{position:absolute;left:0;top:1304px;width:1080px;height:616px;overflow:hidden}
+#silk-photo{width:1080px;height:1617px;object-fit:cover;transform:translateY(-520px);transform-origin:50% 65%}
+#silk-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(8,34,37,.77) 82%)}
+#silk-label{position:absolute;left:77px;top:1760px;color:#fff7e6}
+#closing-video{transform-origin:50% 42%}
+#closing-shade{background:linear-gradient(180deg,rgba(8,34,37,.72),rgba(8,34,37,.30) 20%,transparent 40%,rgba(8,34,37,.75) 90%)}
+#closing-line{position:absolute;left:71px;top:1325px;font-size:108px;line-height:.98;letter-spacing:-1.5px}
+#closing-small{position:absolute;left:77px;top:1600px}
+#endcard{position:absolute;left:0;top:1235px;width:1080px;height:685px;background:#153b3e}
+#end-logo{position:absolute;left:40px;top:1290px;width:360px;height:277px;object-fit:contain;mix-blend-mode:lighten}
+#end-title{position:absolute;left:419px;top:1329px;font:500 104px/.9 Cormorant,serif;letter-spacing:-1px}
+#end-product{position:absolute;left:425px;top:1549px;font-size:43px;color:#ead0a2}
+#end-rule{position:absolute;left:76px;top:1655px;width:928px;color:#b5baaa;opacity:.5}
+#end-url{position:absolute;left:78px;top:1710px;font:400 28px Arial,sans-serif;letter-spacing:4px}
+#end-caption{position:absolute;right:77px;top:1712px;font:400 19px Arial,sans-serif;letter-spacing:2px;color:#d9cbb0}
+
+.pose{position:absolute;inset:0;opacity:0;isolation:isolate;z-index:0}
+#opening-01{opacity:1}
+.scene > :not(.pose){z-index:3}
+.pose-back{z-index:0}.pose-front{z-index:2}
+.depth-type{position:absolute;inset:0;z-index:1;color:#153e43;pointer-events:none}
+.depth-type p{position:absolute;width:1080px;text-align:center;line-height:1;letter-spacing:-8px}
+.type-a{top:338px;font-size:304px}.type-b{top:754px;font-size:314px}
+#signature .type-a{top:320px;font-size:350px}
+#signature .type-b{top:1232px;font-size:273px;letter-spacing:-6px}
+#opening-copy{top:1480px;font-size:77px}
+#gesture-title{font-size:89px}
+#signature-note{top:1588px;font-size:72px}
+#origin-heading{top:339px}
+#opening .shade,#signature .shade{background:linear-gradient(180deg,rgba(8,34,37,.62),transparent 19%,transparent 68%,rgba(8,34,37,.8))}
+#gesture .shade{background:linear-gradient(180deg,rgba(8,34,37,.6),transparent 22%,transparent 54%,rgba(8,34,37,.8))}
+
+</style>
+</head>
+<body>
+<main id="film" data-composition-id="lumiere-vung-song-2-v04" data-width="1080" data-height="1920" data-fps="30" data-start="0" data-duration="20">
+  <section id="opening" class="scene">
+    <div id="opening-01" class="pose" data-layout-ignore>
+<img id="opening-01-photo" class="footage pose-back" src="assets/poses/opening-01.png" alt="Tư thế 1, khăn Vùng Sống 2" data-start="0" data-duration="5">
+<div class="depth-type" aria-hidden="true" data-layout-allow-occlusion><p class="type-a" data-layout-allow-occlusion>VÙNG</p><p class="type-b" data-layout-allow-occlusion>SỐNG</p></div>
+<img id="opening-01-front" class="footage pose-front" src="assets/poses/opening-01-foreground.webp" alt="" data-start="0" data-duration="5">
+</div>
+<div id="opening-02" class="pose" data-layout-ignore>
+<img id="opening-02-photo" class="footage pose-back" src="assets/poses/opening-02.png" alt="Tư thế 2, khăn Vùng Sống 2" data-start="0" data-duration="5">
+<div class="depth-type" aria-hidden="true" data-layout-allow-occlusion><p class="type-a" data-layout-allow-occlusion>VÙNG</p><p class="type-b" data-layout-allow-occlusion>SỐNG</p></div>
+<img id="opening-02-front" class="footage pose-front" src="assets/poses/opening-02-foreground.webp" alt="" data-start="0" data-duration="5">
+</div>
+<div id="opening-03" class="pose" data-layout-ignore>
+<img id="opening-03-photo" class="footage pose-back" src="assets/poses/opening-03.png" alt="Tư thế 3, khăn Vùng Sống 2" data-start="0" data-duration="5">
+<div class="depth-type" aria-hidden="true" data-layout-allow-occlusion><p class="type-a" data-layout-allow-occlusion>VÙNG</p><p class="type-b" data-layout-allow-occlusion>SỐNG</p></div>
+<img id="opening-03-front" class="footage pose-front" src="assets/poses/opening-03-foreground.webp" alt="" data-start="0" data-duration="5">
+</div>
+<div id="opening-04" class="pose" data-layout-ignore>
+<img id="opening-04-photo" class="footage pose-back" src="assets/poses/opening-04.png" alt="Tư thế 4, khăn Vùng Sống 2" data-start="0" data-duration="5">
+<div class="depth-type" aria-hidden="true" data-layout-allow-occlusion><p class="type-a" data-layout-allow-occlusion>VÙNG</p><p class="type-b" data-layout-allow-occlusion>SỐNG</p></div>
+<img id="opening-04-front" class="footage pose-front" src="assets/poses/opening-04-foreground.webp" alt="" data-start="0" data-duration="5">
+</div>
+    <div class="shade" data-layout-ignore></div>
+    <p class="brand">LUMIERE ARTS</p><p class="edition">VÙNG SỐNG 2</p>
+    <h1 id="opening-copy">Nghệ thuật<br>có nhịp riêng.</h1><p id="opening-no">02</p>
+    <div id="opening-rule" class="fine-rule" data-layout-ignore></div><p id="opening-bottom">VÙNG SỐNG 2 · NGUYỄN VĂN TRINH</p>
+  </section>
+  <section id="gesture" class="scene">
+    <div id="gesture-01" class="pose" data-layout-ignore>
+<img id="gesture-01-photo" class="footage pose-back" src="assets/poses/gesture-01.png" alt="Tư thế 1, khăn Vùng Sống 2" data-start="5" data-duration="4">
+</div>
+<div id="gesture-02" class="pose" data-layout-ignore>
+<img id="gesture-02-photo" class="footage pose-back" src="assets/poses/gesture-02.png" alt="Tư thế 2, khăn Vùng Sống 2" data-start="5" data-duration="4">
+</div>
+<div id="gesture-03" class="pose" data-layout-ignore>
+<img id="gesture-03-photo" class="footage pose-back" src="assets/poses/gesture-03.png" alt="Tư thế 3, khăn Vùng Sống 2" data-start="5" data-duration="4">
+</div>
+<div id="gesture-04" class="pose" data-layout-ignore>
+<img id="gesture-04-photo" class="footage pose-back" src="assets/poses/gesture-04.png" alt="Tư thế 4, khăn Vùng Sống 2" data-start="5" data-duration="4">
+</div>
+<div id="gesture-05" class="pose" data-layout-ignore>
+<img id="gesture-05-photo" class="footage pose-back" src="assets/poses/gesture-05.png" alt="Tư thế 5, khăn Vùng Sống 2" data-start="5" data-duration="4">
+</div>
+<div id="gesture-06" class="pose" data-layout-ignore>
+<img id="gesture-06-photo" class="footage pose-back" src="assets/poses/gesture-06.png" alt="Tư thế 6, khăn Vùng Sống 2" data-start="5" data-duration="4">
+</div>
+<div id="gesture-07" class="pose" data-layout-ignore>
+<img id="gesture-07-photo" class="footage pose-back" src="assets/poses/gesture-07.png" alt="Tư thế 7, khăn Vùng Sống 2" data-start="5" data-duration="4">
+</div>
+<div id="gesture-08" class="pose" data-layout-ignore>
+<img id="gesture-08-photo" class="footage pose-back" src="assets/poses/gesture-08.png" alt="Tư thế 8, khăn Vùng Sống 2" data-start="5" data-duration="4">
+</div>
+    <div class="shade" data-layout-ignore></div><p class="brand">LUMIERE ARTS</p><p class="edition">VÙNG SỐNG 2</p>
+    <h2 id="gesture-title">Một chiếc khăn.<br>Nhiều nét riêng.</h2><p id="gesture-index" class="eyebrow">NGHỆ THUẬT, THEO BẠN.</p>
+  </section>
+  <section id="signature" class="scene">
+    <div id="signature-01" class="pose" data-layout-ignore>
+<img id="signature-01-photo" class="footage pose-back" src="assets/poses/signature-01.png" alt="Tư thế 1, khăn Vùng Sống 2" data-start="9" data-duration="4">
+<div class="depth-type" aria-hidden="true" data-layout-allow-occlusion><p class="type-a" data-layout-allow-occlusion>NÉT</p><p class="type-b" data-layout-allow-occlusion>RIÊNG</p></div>
+<img id="signature-01-front" class="footage pose-front" src="assets/poses/signature-01-foreground.webp" alt="" data-start="9" data-duration="4">
+</div>
+<div id="signature-02" class="pose" data-layout-ignore>
+<img id="signature-02-photo" class="footage pose-back" src="assets/poses/signature-02.png" alt="Tư thế 2, khăn Vùng Sống 2" data-start="9" data-duration="4">
+<div class="depth-type" aria-hidden="true" data-layout-allow-occlusion><p class="type-a" data-layout-allow-occlusion>NÉT</p><p class="type-b" data-layout-allow-occlusion>RIÊNG</p></div>
+<img id="signature-02-front" class="footage pose-front" src="assets/poses/signature-02-foreground.webp" alt="" data-start="9" data-duration="4">
+</div>
+<div id="signature-03" class="pose" data-layout-ignore>
+<img id="signature-03-photo" class="footage pose-back" src="assets/poses/signature-03.png" alt="Tư thế 3, khăn Vùng Sống 2" data-start="9" data-duration="4">
+<div class="depth-type" aria-hidden="true" data-layout-allow-occlusion><p class="type-a" data-layout-allow-occlusion>NÉT</p><p class="type-b" data-layout-allow-occlusion>RIÊNG</p></div>
+<img id="signature-03-front" class="footage pose-front" src="assets/poses/signature-03-foreground.webp" alt="" data-start="9" data-duration="4">
+</div>
+<div id="signature-04" class="pose" data-layout-ignore>
+<img id="signature-04-photo" class="footage pose-back" src="assets/poses/signature-04.png" alt="Tư thế 4, khăn Vùng Sống 2" data-start="9" data-duration="4">
+<div class="depth-type" aria-hidden="true" data-layout-allow-occlusion><p class="type-a" data-layout-allow-occlusion>NÉT</p><p class="type-b" data-layout-allow-occlusion>RIÊNG</p></div>
+<img id="signature-04-front" class="footage pose-front" src="assets/poses/signature-04-foreground.webp" alt="" data-start="9" data-duration="4">
+</div>
+    <div class="shade" data-layout-ignore></div><p class="brand">LUMIERE ARTS</p><p class="edition">VÙNG SỐNG 2</p>
+    <h2 id="signature-note">Một nét riêng.</h2><p id="signature-label" class="eyebrow">TRONG TỪNG DIỆN MẠO.</p>
+  </section>
+  <section id="origin" class="scene">
+    <p class="brand">LUMIERE ARTS</p><p class="edition">VÙNG SỐNG 2</p>
+    <p id="origin-kicker" class="eyebrow">KHỞI NGUỒN TỪ HỘI HỌA</p><h2 id="origin-heading">Từ một nét vẽ.</h2>
+    <div id="art-frame"><img id="original-artwork" src="assets/images/la-vung-song-2-artwork-landscape.jpg" alt="Nguyên tác Vùng Sống 2 của Nguyễn Văn Trinh" data-start="13" data-duration="3"></div>
+    <p id="origin-title">Vùng Sống 2</p><p id="origin-artist">Nguyễn Văn Trinh</p>
+    <div id="origin-rule" class="fine-rule" data-layout-ignore></div><p id="origin-explanation">Khăn lụa chuyển thể từ một phần nguyên tác.</p>
+    <div id="silk-frame" data-layout-allow-overflow><img id="silk-photo" data-layout-allow-overflow src="assets/images/la-scarf-riverside-front.jpg" alt="Chi tiết màu sắc trên khăn Vùng Sống 2" data-start="13" data-duration="3"></div>
+    <p id="silk-label" class="eyebrow">ĐẾN MỘT NÉT RIÊNG.</p>
+  </section>
+  <section id="closing" class="scene">
+    <div id="closing-01" class="pose" data-layout-ignore>
+<img id="closing-01-photo" class="footage pose-back" src="assets/poses/closing-01.png" alt="Tư thế 1, khăn Vùng Sống 2" data-start="16" data-duration="4">
+</div>
+<div id="closing-02" class="pose" data-layout-ignore>
+<img id="closing-02-photo" class="footage pose-back" src="assets/poses/closing-02.png" alt="Tư thế 2, khăn Vùng Sống 2" data-start="16" data-duration="4">
+</div>
+<div id="closing-03" class="pose" data-layout-ignore>
+<img id="closing-03-photo" class="footage pose-back" src="assets/poses/closing-03.png" alt="Tư thế 3, khăn Vùng Sống 2" data-start="16" data-duration="4">
+</div>
+    <div id="closing-shade" class="shade" data-layout-ignore></div><p class="brand">LUMIERE ARTS</p><p class="edition">VÙNG SỐNG 2</p>
+    <h2 id="closing-line">Mang nghệ thuật<br>theo bạn.</h2><p id="closing-small" class="eyebrow">VÙNG SỐNG 2</p>
+    <div id="endcard" data-layout-ignore></div><img id="end-logo" src="assets/lumiere-official-logo.jpg" alt="Logo Lumiere Arts">
+    <h2 id="end-title">The Art<br>of Silk</h2><p id="end-product">Vùng Sống 2</p>
+    <div id="end-rule" class="fine-rule" data-layout-ignore></div><p id="end-url">lumierearts.com</p><p id="end-caption">NGHỆ THUẬT TRÊN LỤA</p>
+  </section>
+  <audio id="music" src="assets/music/stop-motion-20s.wav" data-start="0" data-duration="20" data-volume="1" data-track-index="5"></audio>
+</main>
+<script>
+window.__timelines=window.__timelines||{};
+const tl=gsap.timeline({paused:true});
+const cut=(a,b,t)=>tl.set(a,{opacity:0},t).set(b,{opacity:1},t);
+function poses(scene,sequence,start,hold){
+  sequence.forEach((number,i)=>{
+    const at=start+i*hold;
+    if(scene==='opening' && i===0)return;
+    tl.set('#'+scene+' .pose',{opacity:0},at)
+      .set('#'+scene+'-'+String(number).padStart(2,'0'),{opacity:1},at);
+  });
+}
+poses('opening',[1,2,3,4,2],0,1);
+poses('gesture',[1,2,3,4,5,6,7,8],5,.5);
+poses('signature',[1,2,3,4],9,1);
+poses('closing',[1,2,3],16,1);
+// The lettering advances on held steps; photo and mask never move independently.
+tl.fromTo('#opening .type-a',{x:24},{x:-24,duration:5,ease:'steps(10)'},0)
+  .fromTo('#opening .type-b',{x:-24},{x:24,duration:5,ease:'steps(10)'},0)
+  .from('#opening-copy,#opening-no',{opacity:0,y:20,duration:.4,ease:'steps(2)'},.2)
+  .from('#opening-rule,#opening-bottom',{opacity:0,duration:.4,ease:'steps(2)'},.6);
+cut('#opening','#gesture',5);
+tl.from('#gesture-title',{opacity:0,y:22,duration:.4,ease:'steps(2)'},5.1)
+  .from('#gesture-index',{opacity:0,duration:.2,ease:'steps(1)'},5.4);
+cut('#gesture','#signature',9);
+tl.fromTo('#signature .type-a',{x:-26},{x:26,duration:4,ease:'steps(8)'},9)
+  .fromTo('#signature .type-b',{x:26},{x:-26,duration:4,ease:'steps(8)'},9)
+  .from('#signature-note,#signature-label',{opacity:0,y:16,duration:.4,ease:'steps(2)'},9.2);
+cut('#signature','#origin',13);
+tl.from('#origin-kicker,#origin-heading',{opacity:0,y:16,duration:.3,ease:'steps(2)'},13)
+  .from('#art-frame',{opacity:0,y:20,duration:.3,ease:'steps(2)'},13.1)
+  .from('#origin-title,#origin-artist,#origin-explanation,#origin-rule',{opacity:0,duration:.3,ease:'steps(2)'},13.2)
+  .from('#silk-frame,#silk-label',{opacity:0,duration:.3,ease:'steps(2)'},13.35);
+cut('#origin','#closing',16);
+tl.from('#closing-line,#closing-small',{opacity:0,y:20,duration:.4,ease:'steps(2)'},16.1)
+  .set('#closing-line,#closing-small',{opacity:0},18)
+  .from('#endcard',{y:700,duration:.4,ease:'steps(3)'},18)
+  .from('#end-logo,#end-title,#end-product,#end-rule,#end-url,#end-caption',{opacity:0,y:16,duration:.4,ease:'steps(2)'},18.25)
+  .set({}, {},20);
+window.__timelines['lumiere-vung-song-2-v04']=tl;
+</script>
+</body></html>

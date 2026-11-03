@@ -1,0 +1,116 @@
+[
+  {
+    "id": "opening-01",
+    "source": "v03-art-in-motion/source/assets/video/opening-clean.mp4",
+    "source_time": 0.4,
+    "static_mask": true
+  },
+  {
+    "id": "opening-02",
+    "source": "v03-art-in-motion/source/assets/video/opening-clean.mp4",
+    "source_time": 1.7,
+    "static_mask": true
+  },
+  {
+    "id": "opening-03",
+    "source": "v03-art-in-motion/source/assets/video/opening-clean.mp4",
+    "source_time": 3.2,
+    "static_mask": true
+  },
+  {
+    "id": "opening-04",
+    "source": "v03-art-in-motion/source/assets/video/opening-clean.mp4",
+    "source_time": 4.8,
+    "static_mask": true
+  },
+  {
+    "id": "gesture-01",
+    "source": "v03-art-in-motion/source/assets/video/gesture-clean.mp4",
+    "source_time": 0.0,
+    "static_mask": false
+  },
+  {
+    "id": "gesture-02",
+    "source": "v03-art-in-motion/source/assets/video/gesture-clean.mp4",
+    "source_time": 0.5,
+    "static_mask": false
+  },
+  {
+    "id": "gesture-03",
+    "source": "v03-art-in-motion/source/assets/video/gesture-clean.mp4",
+    "source_time": 1.0,
+    "static_mask": false
+  },
+  {
+    "id": "gesture-04",
+    "source": "v03-art-in-motion/source/assets/video/gesture-clean.mp4",
+    "source_time": 1.5,
+    "static_mask": false
+  },
+  {
+    "id": "gesture-05",
+    "source": "v03-art-in-motion/source/assets/video/gesture-clean.mp4",
+    "source_time": 2.0,
+    "static_mask": false
+  },
+  {
+    "id": "gesture-06",
+    "source": "v03-art-in-motion/source/assets/video/gesture-clean.mp4",
+    "source_time": 2.5,
+    "static_mask": false
+  },
+  {
+    "id": "gesture-07",
+    "source": "v03-art-in-motion/source/assets/video/gesture-clean.mp4",
+    "source_time": 3.0,
+    "static_mask": false
+  },
+  {
+    "id": "gesture-08",
+    "source": "v03-art-in-motion/source/assets/video/gesture-clean.mp4",
+    "source_time": 3.5,
+    "static_mask": false
+  },
+  {
+    "id": "signature-01",
+    "source": "v03-art-in-motion/source/assets/video/signature-clean.mp4",
+    "source_time": 0.3,
+    "static_mask": true
+  },
+  {
+    "id": "signature-02",
+    "source": "v03-art-in-motion/source/assets/video/signature-clean.mp4",
+    "source_time": 1.2,
+    "static_mask": true
+  },
+  {
+    "id": "signature-03",
+    "source": "v03-art-in-motion/source/assets/video/signature-clean.mp4",
+    "source_time": 2.1,
+    "static_mask": true
+  },
+  {
+    "id": "signature-04",
+    "source": "v03-art-in-motion/source/assets/video/signature-clean.mp4",
+    "source_time": 3.1,
+    "static_mask": true
+  },
+  {
+    "id": "closing-01",
+    "source": "v03-art-in-motion/source/assets/video/closing-clean.mp4",
+    "source_time": 0.5,
+    "static_mask": false
+  },
+  {
+    "id": "closing-02",
+    "source": "v03-art-in-motion/source/assets/video/closing-clean.mp4",
+    "source_time": 2.0,
+    "static_mask": false
+  },
+  {
+    "id": "closing-03",
+    "source": "v03-art-in-motion/source/assets/video/closing-clean.mp4",
+    "source_time": 4.0,
+    "static_mask": false
+  }
+]

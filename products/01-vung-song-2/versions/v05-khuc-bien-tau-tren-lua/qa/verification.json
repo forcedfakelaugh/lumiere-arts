@@ -1,0 +1,237 @@
+{
+  "file": "exports/Lumiere-Arts-V05-Showcase-24s-1080p.mp4",
+  "duration": 24.0,
+  "width": 1080,
+  "height": 1920,
+  "fps": "30/1",
+  "frames": 720,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "bytes": 28645878,
+  "sha256": "9eafe784ff4eb0e435d7c18f9c6d4b2cd0a519264c3248adceec27bbc9dff817",
+  "source_sha256": "adba974760a78ec204598566d5da14adf0a9caf161c5e81ee73ba423ff1580ef",
+  "decode_errors": "",
+  "black_segments": [],
+  "audio_reference_correlation": 0.9998285732455942,
+  "music": "Rockot Slow Motion Fashion Ambient, uninterrupted source excerpt starting at 6.6s, volume 0.8.",
+  "transitions": [
+    {
+      "scene": "artLock",
+      "frame": 94,
+      "seconds": 3.133333,
+      "measured_attack_seconds": 3.1275,
+      "offset_ms": 5.833,
+      "attack_strength": 0.250253
+    },
+    {
+      "scene": "craft",
+      "frame": 130,
+      "seconds": 4.333333,
+      "measured_attack_seconds": 4.3375,
+      "offset_ms": -4.167,
+      "attack_strength": 0.239909
+    },
+    {
+      "scene": "craftSwap",
+      "frame": 203,
+      "seconds": 6.766667,
+      "measured_attack_seconds": 6.7575,
+      "offset_ms": 9.167,
+      "attack_strength": 0.238181
+    },
+    {
+      "scene": "unfold",
+      "frame": 257,
+      "seconds": 8.566667,
+      "measured_attack_seconds": 8.5775,
+      "offset_ms": -10.833,
+      "attack_strength": 0.201966
+    },
+    {
+      "scene": "unfoldSwap",
+      "frame": 348,
+      "seconds": 11.6,
+      "measured_attack_seconds": 11.6075,
+      "offset_ms": -7.5,
+      "attack_strength": 0.290868
+    },
+    {
+      "scene": "looks",
+      "frame": 385,
+      "seconds": 12.833333,
+      "measured_attack_seconds": 12.8275,
+      "offset_ms": 5.833,
+      "attack_strength": 0.317979
+    },
+    {
+      "scene": "panel2",
+      "frame": 421,
+      "seconds": 14.033333,
+      "measured_attack_seconds": 14.0325,
+      "offset_ms": 0.833,
+      "attack_strength": 0.215953
+    },
+    {
+      "scene": "panel3",
+      "frame": 448,
+      "seconds": 14.933333,
+      "measured_attack_seconds": 14.9425,
+      "offset_ms": -9.167,
+      "attack_strength": 0.335121
+    },
+    {
+      "scene": "hero",
+      "frame": 521,
+      "seconds": 17.366667,
+      "measured_attack_seconds": 17.3675,
+      "offset_ms": -0.833,
+      "attack_strength": 0.23722
+    },
+    {
+      "scene": "heroCopy",
+      "frame": 566,
+      "seconds": 18.866667,
+      "measured_attack_seconds": 18.8825,
+      "offset_ms": -15.833,
+      "attack_strength": 0.232354
+    },
+    {
+      "scene": "closing",
+      "frame": 612,
+      "seconds": 20.4,
+      "measured_attack_seconds": 20.4025,
+      "offset_ms": -2.5,
+      "attack_strength": 0.304117
+    }
+  ],
+  "rendered_transitions": [
+    {
+      "scene": "artLock",
+      "frame": 94,
+      "seconds": 3.133333,
+      "measured_attack_seconds": 3.1275,
+      "offset_ms": 5.833,
+      "attack_strength": 0.250211
+    },
+    {
+      "scene": "craft",
+      "frame": 130,
+      "seconds": 4.333333,
+      "measured_attack_seconds": 4.3375,
+      "offset_ms": -4.167,
+      "attack_strength": 0.240819
+    },
+    {
+      "scene": "craftSwap",
+      "frame": 203,
+      "seconds": 6.766667,
+      "measured_attack_seconds": 6.7575,
+      "offset_ms": 9.167,
+      "attack_strength": 0.23668
+    },
+    {
+      "scene": "unfold",
+      "frame": 257,
+      "seconds": 8.566667,
+      "measured_attack_seconds": 8.5775,
+      "offset_ms": -10.833,
+      "attack_strength": 0.200969
+    },
+    {
+      "scene": "unfoldSwap",
+      "frame": 348,
+      "seconds": 11.6,
+      "measured_attack_seconds": 11.6075,
+      "offset_ms": -7.5,
+      "attack_strength": 0.288865
+    },
+    {
+      "scene": "looks",
+      "frame": 385,
+      "seconds": 12.833333,
+      "measured_attack_seconds": 12.8275,
+      "offset_ms": 5.833,
+      "attack_strength": 0.313796
+    },
+    {
+      "scene": "panel2",
+      "frame": 421,
+      "seconds": 14.033333,
+      "measured_attack_seconds": 14.0325,
+      "offset_ms": 0.833,
+      "attack_strength": 0.217033
+    },
+    {
+      "scene": "panel3",
+      "frame": 448,
+      "seconds": 14.933333,
+      "measured_attack_seconds": 14.9425,
+      "offset_ms": -9.167,
+      "attack_strength": 0.329606
+    },
+    {
+      "scene": "hero",
+      "frame": 521,
+      "seconds": 17.366667,
+      "measured_attack_seconds": 17.3675,
+      "offset_ms": -0.833,
+      "attack_strength": 0.235354
+    },
+    {
+      "scene": "heroCopy",
+      "frame": 566,
+      "seconds": 18.866667,
+      "measured_attack_seconds": 18.8825,
+      "offset_ms": -15.833,
+      "attack_strength": 0.232752
+    },
+    {
+      "scene": "closing",
+      "frame": 612,
+      "seconds": 20.4,
+      "measured_attack_seconds": 20.4025,
+      "offset_ms": -2.5,
+      "attack_strength": 0.307241
+    }
+  ],
+  "hero_transition": {
+    "start_frame": 503,
+    "midpoint_frame": 521,
+    "end_frame": 539,
+    "duplicate_frames": 0
+  },
+  "contact_sheet_frames": [
+    15,
+    60,
+    105,
+    150,
+    215,
+    285,
+    360,
+    405,
+    435,
+    470,
+    521,
+    545,
+    580,
+    640,
+    710
+  ],
+  "sampled_times": [
+    0.5,
+    2.0,
+    3.5,
+    5.0,
+    7.167,
+    9.5,
+    12.0,
+    13.5,
+    14.5,
+    15.667,
+    17.367,
+    18.167,
+    19.333,
+    21.333,
+    23.667
+  ]
+}

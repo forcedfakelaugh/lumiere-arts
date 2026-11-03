@@ -5,9 +5,13 @@ Hyperframes HTML timeline, metadata, dependency manifest, images, 1080p working
 video clips, music, fonts and local GSAP script. The working `.mp4` clips in
 `source/assets/video/` are inputs, so they are intentionally versioned.
 
-V01 and V02 can be edited and rendered from a clone after installing their npm
+V01 through V05 can be edited and rendered from a clone after installing their npm
 dependencies. `node_modules` is not committed. On the original Mac it may be a
 symlink to a shared installation; that symlink is also excluded.
+
+V04 (`v04-stop-motion`) uses selected PNG photographs,
+lossless WebP foreground cutouts and static masks in place of moving video.
+Its included assets are sufficient to render it without running segmentation.
 
 Not committed:
 

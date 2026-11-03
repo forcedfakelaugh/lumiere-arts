@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Lumiere Arts · Vùng Sống 2 · V05 Ấn bản Triển lãm (New Edit)</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+@font-face {
+  font-family: E;
+  src: url('assets/editorial-serif.woff2');
+}
+@font-face {
+  font-family: C;
+  src: url('assets/cormorant-medium.woff2');
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  width: 1080px;
+  height: 1920px;
+  background: #0d2629;
+  overflow: hidden;
+  color: #fff9ec;
+  font-family: E, serif;
+  -webkit-font-smoothing: antialiased;
+}
+main, .scene {
+  position: absolute;
+  inset: 0;
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+}
+.scene {
+  visibility: hidden;
+}
+h1, h2, h3, p {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Global architectural chrome */
+.zine-border {
+  position: absolute;
+  left: 44px;
+  top: 44px;
+  width: 992px;
+  height: 1832px;
+  border: 1px solid rgba(226, 201, 154, 0.24);
+  pointer-events: none;
+}
+.zine-border.ink {
+  border-color: rgba(20, 56, 61, 0.18);
+}
+.kicker {
+  font: 500 23px C, serif;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #e2c99a;
+}
+.kicker.ink {
+  color: #6e5835;
+}
+.gold-line {
+  height: 2px;
+  background: #c5a56e;
+  transform-origin: left center;
+}
+
+/* ==========================================================================
+   SCENE 1: EXHIBITION POSTER & LAYERED GALLERY STACK (0.00s - 3.73s)
+   ========================================================================== */
+#s1-poster {
+  background: #0d2629;
+  color: #fff9ec;
+}
+#s1-topbar {
+  position: absolute;
+  left: 76px;
+  right: 76px;
+  top: 76px;
+  display: flex;
+  justify-content: space-between;
+  font: 500 22px C, serif;
+  letter-spacing: 4px;
+  color: #e2c99a;
+}
+#s1-headline-block {
+  position: absolute;
+  left: 76px;
+  top: 150px;
+  z-index: 5;
+}
+#s1-headline-block h1 {
+  font-size: 120px;
+  line-height: 0.98;
+  letter-spacing: -2px;
+  color: #fff9ec;
+  margin-top: 14px;
+}
+#s1-sub {
+  font-size: 42px;
+  color: #e2c99a;
+  margin-top: 18px;
+}
+/* Staggered 2-photo gallery cards */
+#s1-card-left {
+  position: absolute;
+  left: 76px;
+  top: 470px;
+  width: 480px;
+  height: 540px;
+  border-radius: 140px 18px 18px 18px;
+  border: 1.5px solid rgba(226, 201, 154, 0.55);
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(4, 14, 16, 0.45);
+  z-index: 2;
+}
+#s1-card-right {
+  position: absolute;
+  left: 524px;
+  top: 530px;
+  width: 480px;
+  height: 500px;
+  border-radius: 18px 140px 18px 18px;
+  border: 1.5px solid rgba(226, 201, 154, 0.55);
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(4, 14, 16, 0.5);
+  z-index: 3;
+}
+#s1-card-left img, #s1-card-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Full horizontal painting plate below */
+#s1-painting-plate {
+  position: absolute;
+  left: 76px;
+  top: 1076px;
+  width: 928px;
+  height: 454px;
+  padding: 18px;
+  background: #f3ede1;
+  border: 2px solid #c5a56e;
+  border-radius: 18px;
+  box-shadow: 0 28px 60px rgba(4, 14, 16, 0.55);
+  overflow: hidden;
+  z-index: 4;
+}
+#s1-painting-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #143539;
+}
+#s1-painting-plate img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+#s1-meta-bar {
+  position: absolute;
+  left: 76px;
+  right: 76px;
+  top: 1580px;
+}
+#s1-meta-spec {
+  font-size: 40px;
+  color: #e2c99a;
+}
+#s1-meta-quote {
+  font-size: 52px;
+  line-height: 1.26;
+  color: #fff9ec;
+  margin-top: 16px;
+}
+
+/* ==========================================================================
+   SCENE 2: ASYMMETRIC L-GRID ATELIER SPREAD (3.73s - 7.67s)
+   ========================================================================== */
+#s2-atelier {
+  background: #f3ede1;
+  color: #14363b;
+}
+#s2-header {
+  position: absolute;
+  left: 76px;
+  right: 76px;
+  top: 84px;
+}
+#s2-title {
+  font-size: 86px;
+  line-height: 1.04;
+  letter-spacing: -1px;
+  color: #14363b;
+  margin-top: 14px;
+}
+/* Tall left silk-roll video window */
+#s2-roll-box {
+  position: absolute;
+  left: 76px;
+  top: 340px;
+  width: 536px;
+  height: 1180px;
+  border-radius: 180px 24px 24px 24px;
+  border: 1.5px solid #a68958;
+  overflow: hidden;
+  background: #14363b;
+}
+#s2-roll-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Right top printing-head video window */
+#s2-head-box {
+  position: absolute;
+  left: 636px;
+  top: 340px;
+  width: 368px;
+  height: 576px;
+  border-radius: 24px 120px 24px 24px;
+  border: 1.5px solid #a68958;
+  overflow: hidden;
+  background: #14363b;
+}
+#s2-head-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Right bottom macro painting detail */
+#s2-macro-box {
+  position: absolute;
+  left: 636px;
+  top: 944px;
+  width: 368px;
+  height: 576px;
+  border-radius: 24px 24px 120px 24px;
+  border: 1.5px solid #a68958;
+  overflow: hidden;
+  background: #14363b;
+}
+#s2-macro-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 28% 55%;
+  display: block;
+}
+#s2-macro-tag {
+  position: absolute;
+  left: 656px;
+  top: 1446px;
+  padding: 8px 18px;
+  background: rgba(13, 38, 41, 0.88);
+  border: 1px solid rgba(226, 201, 154, 0.5);
+  border-radius: 99px;
+  font: 500 20px C, serif;
+  letter-spacing: 3px;
+  color: #fff9ec;
+  z-index: 4;
+}
+#s2-deck {
+  position: absolute;
+  left: 76px;
+  right: 76px;
+  top: 1574px;
+}
+#s2-deck-main {
+  font-size: 56px;
+  line-height: 1.24;
+  color: #14363b;
+}
+#s2-deck-sub {
+  font-size: 36px;
+  color: #5a492e;
+  margin-top: 16px;
+}
+
+/* ==========================================================================
+   SCENE 3: STAIRCASE UNFOLD & POLAROID CONTACT STRIP (7.67s - 11.60s)
+   ========================================================================== */
+#s3-motion {
+  background: #0d2629;
+  color: #fff9ec;
+}
+#s3-video-stairs, #s3-video-river {
+  position: absolute;
+  inset: 0;
+  width: 1080px;
+  height: 1920px;
+  object-fit: cover;
+}
+#s3-video-river {
+  clip-path: inset(100% 0 0 0);
+}
+#s3-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgba(8, 26, 29, 0.92) 0%, rgba(8, 26, 29, 0.68) 28%, transparent 55%),
+    linear-gradient(180deg, rgba(8, 26, 29, 0.55) 0%, transparent 22%);
+  pointer-events: none;
+}
+/* Floating contact-sheet polaroid strip on the top-right */
+#s3-contact-strip {
+  position: absolute;
+  right: 68px;
+  top: 108px;
+  width: 300px;
+  padding: 14px;
+  background: rgba(243, 237, 225, 0.95);
+  border: 1.5px solid #c5a56e;
+  border-radius: 22px;
+  box-shadow: 0 24px 48px rgba(4, 15, 17, 0.45);
+  z-index: 4;
+}
+.strip-thumb {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+#s3-thumb-2 {
+  margin-top: 12px;
+}
+#s3-strip-caption {
+  margin-top: 10px;
+  font: 500 19px C, serif;
+  letter-spacing: 3px;
+  color: #14363b;
+  text-align: center;
+}
+#s3-copy-card {
+  position: absolute;
+  left: 76px;
+  right: 76px;
+  bottom: 116px;
+  z-index: 5;
+}
+#s3-title {
+  font-size: 92px;
+  line-height: 1.06;
+  color: #fff9ec;
+  margin-top: 16px;
+}
+#s3-sub {
+  font-size: 40px;
+  line-height: 1.42;
+  color: #e2c99a;
+  margin-top: 22px;
+}
+
+/* ==========================================================================
+   SCENE 4: 4-CELL BENTO EDITORIAL MOSAIC (11.60s - 16.47s)
+   ========================================================================== */
+#s4-bento {
+  background: #102c30;
+  color: #fff9ec;
+}
+#s4-header {
+  position: absolute;
+  left: 72px;
+  right: 72px;
+  top: 82px;
+}
+#s4-heading {
+  font-size: 80px;
+  line-height: 1.05;
+  color: #fff9ec;
+  margin-top: 12px;
+}
+.bento-cell {
+  position: absolute;
+  overflow: hidden;
+  border: 1.5px solid rgba(226, 201, 154, 0.55);
+  background: #0a1e21;
+  box-shadow: 0 18px 40px rgba(4, 14, 16, 0.35);
+}
+.bento-cell video, .bento-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Cell A: Top-Left tall video (556 x 760) */
+#bento-a {
+  left: 72px;
+  top: 284px;
+  width: 556px;
+  height: 760px;
+  border-radius: 130px 22px 22px 22px;
+}
+/* Cell B: Top-Right portrait photo (356 x 540) */
+#bento-b {
+  left: 652px;
+  top: 284px;
+  width: 356px;
+  height: 540px;
+  border-radius: 22px 110px 22px 22px;
+}
+/* Cell C: Bottom-Left back-drape photo (356 x 540) */
+#bento-c {
+  left: 72px;
+  top: 1068px;
+  width: 356px;
+  height: 540px;
+  border-radius: 22px 22px 22px 110px;
+}
+/* Cell D: Bottom-Right tall video (556 x 760) */
+#bento-d {
+  left: 452px;
+  top: 848px;
+  width: 556px;
+  height: 760px;
+  border-radius: 22px 22px 130px 22px;
+}
+#s4-footer {
+  position: absolute;
+  left: 72px;
+  right: 72px;
+  top: 1654px;
+}
+#s4-tags {
+  font: 500 24px C, serif;
+  letter-spacing: 4px;
+  color: #e2c99a;
+}
+#s4-desc {
+  font-size: 46px;
+  line-height: 1.3;
+  color: #fff9ec;
+  margin-top: 14px;
+}
+
+/* ==========================================================================
+   SCENE 5: ROMAN-ARCH LAKESIDE FEATURE (16.47s - 20.40s)
+   ========================================================================== */
+#s5-arch {
+  background: #f3ede1;
+  color: #14363b;
+}
+#s5-header {
+  position: absolute;
+  left: 76px;
+  right: 76px;
+  top: 82px;
+}
+#s5-title {
+  font-size: 86px;
+  line-height: 1.05;
+  color: #14363b;
+  margin-top: 12px;
+}
+#s5-arch-frame {
+  position: absolute;
+  left: 76px;
+  top: 320px;
+  width: 780px;
+  height: 1220px;
+  border-radius: 390px 390px 28px 28px;
+  border: 2px solid #a68958;
+  overflow: hidden;
+  background: #14363b;
+  box-shadow: 0 26px 56px rgba(16, 42, 46, 0.16);
+}
+#s5-arch-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+#s5-inset-card {
+  position: absolute;
+  right: 68px;
+  top: 980px;
+  width: 340px;
+  height: 560px;
+  padding: 12px;
+  background: #102c30;
+  border: 2px solid #c5a56e;
+  border-radius: 170px 20px 20px 20px;
+  box-shadow: 0 24px 50px rgba(8, 24, 27, 0.32);
+  z-index: 4;
+  overflow: hidden;
+}
+#s5-inset-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 158px 12px 12px 12px;
+  display: block;
+}
+#s5-spec-bar {
+  position: absolute;
+  left: 76px;
+  right: 76px;
+  top: 1594px;
+}
+#s5-spec-main {
+  font-size: 54px;
+  color: #14363b;
+}
+#s5-spec-sub {
+  font-size: 38px;
+  color: #6e5835;
+  margin-top: 14px;
+}
+
+/* ==========================================================================
+   SCENE 6: COLLECTOR'S EDITION WINGED FINALE (20.40s - 24.00s)
+   ========================================================================== */
+#s6-finale {
+  background: #0e282c;
+  color: #fff9ec;
+}
+#s6-topbar {
+  position: absolute;
+  left: 76px;
+  right: 76px;
+  top: 80px;
+  text-align: center;
+  font: 500 24px C, serif;
+  letter-spacing: 5px;
+  color: #e2c99a;
+}
+/* Symmetric Winged Collector Showcase */
+#s6-wing-left {
+  position: absolute;
+  left: 64px;
+  top: 230px;
+  width: 272px;
+  height: 820px;
+  border-radius: 136px 20px 20px 136px;
+  border: 1.5px solid rgba(226, 201, 154, 0.5);
+  overflow: hidden;
+  z-index: 1;
+}
+#s6-center-arch {
+  position: absolute;
+  left: 312px;
+  top: 156px;
+  width: 456px;
+  height: 960px;
+  border-radius: 228px 228px 28px 28px;
+  border: 2px solid #e2c99a;
+  overflow: hidden;
+  box-shadow: 0 28px 64px rgba(3, 12, 14, 0.55);
+  z-index: 3;
+}
+#s6-wing-right {
+  position: absolute;
+  right: 64px;
+  top: 230px;
+  width: 272px;
+  height: 820px;
+  border-radius: 20px 136px 136px 20px;
+  border: 1.5px solid rgba(226, 201, 154, 0.5);
+  overflow: hidden;
+  z-index: 1;
+}
+#s6-wing-left img, #s6-center-arch img, #s6-wing-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+#s6-divider {
+  position: absolute;
+  left: 76px;
+  right: 76px;
+  top: 1176px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(226, 201, 154, 0.72), transparent);
+}
+#s6-logo {
+  position: absolute;
+  left: 370px;
+  top: 1204px;
+  width: 340px;
+  height: 262px;
+  object-fit: contain;
+  filter: brightness(1.85) saturate(0.75) drop-shadow(0 0 1px rgba(224, 183, 86, 0.45));
+}
+#s6-brand-block {
+  position: absolute;
+  left: 76px;
+  right: 76px;
+  top: 1484px;
+  text-align: center;
+}
+#s6-brand-title {
+  font: 500 94px/1 C, serif;
+  color: #fff9ec;
+}
+#s6-brand-sub {
+  font-size: 42px;
+  color: #e2c99a;
+  margin-top: 20px;
+}
+#s6-footer {
+  position: absolute;
+  left: 76px;
+  right: 76px;
+  top: 1784px;
+  display: flex;
+  justify-content: space-between;
+  font: 500 28px C, serif;
+  letter-spacing: 4px;
+  color: #fff9ec;
+}
+</style>
+</head>
+<body>
+<main data-hf-id="hf-main" id="film" data-composition-id="lumiere-v05" data-width="1080" data-height="1920" data-fps="30" data-start="0" data-duration="24">
+
+  <!-- SCENE 1: EXHIBITION POSTER & LAYERED GALLERY STACK (0.00s - 3.73s) -->
+  <section data-hf-id="hf-s1" id="s1-poster" class="scene">
+    <div data-hf-id="hf-s1-bdr" class="zine-border" data-layout-ignore></div>
+    <div data-hf-id="hf-s1-top" id="s1-topbar">
+      <span data-hf-id="hf-s1-tl">LUMIERE ARTS · ẤN BẢN 01</span>
+      <span data-hf-id="hf-s1-tr">NGUYỄN VĂN TRINH · 2023</span>
+    </div>
+    <div data-hf-id="hf-s1-hb" id="s1-headline-block">
+      <p data-hf-id="hf-s1-k" class="kicker">01 · TỪ KHÔNG GIAN HỘI HỌA</p>
+      <h1 data-hf-id="hf-s1-h1">Vùng Sống 2</h1>
+      <p data-hf-id="hf-s1-sub" id="s1-sub">Tư liệu triển lãm bộ Vùng Sống &amp; Nguyên tác trên lụa</p>
+    </div>
+    <div data-hf-id="hf-s1-cl" id="s1-card-left" data-layout-allow-overflow>
+      <img data-hf-id="hf-s1-il" id="s1-img-visitors" data-layout-allow-overflow src="assets/images/la-gallery-visitors.jpg" alt="Khách thưởng lãm bộ tranh Vùng Sống" data-start="0" data-duration="4.0">
+    </div>
+    <div data-hf-id="hf-s1-cr" id="s1-card-right" data-layout-allow-overflow>
+      <img data-hf-id="hf-s1-ir" id="s1-img-panels" data-layout-allow-overflow src="assets/images/la-gallery-artwork-panels.jpg" alt="Không gian trưng bày bộ Vùng Sống" data-start="0" data-duration="4.0">
+    </div>
+    <div data-hf-id="hf-s1-pp" id="s1-painting-plate" data-layout-allow-overflow>
+      <div data-hf-id="hf-s1-pi" id="s1-painting-inner" data-layout-allow-overflow>
+        <img data-hf-id="hf-s1-ip" id="s1-img-painting" data-layout-allow-overflow src="assets/images/la-vung-song-2-artwork-landscape.jpg" alt="Nguyên tác Vùng Sống 2" data-start="0" data-duration="4.0">
+      </div>
+    </div>
+    <div data-hf-id="hf-s1-mb" id="s1-meta-bar">
+      <p data-hf-id="hf-s1-ms" id="s1-meta-spec">Màu nước trên lụa · 100 × 200 cm · 2023</p>
+      <p data-hf-id="hf-s1-mq" id="s1-meta-quote">Từ một phần nguyên tác, một hành trình mới trên lụa.</p>
+    </div>
+  </section>
+
+  <!-- SCENE 2: ASYMMETRIC L-GRID ATELIER SPREAD (3.73s - 7.67s) -->
+  <section data-hf-id="hf-s2" id="s2-atelier" class="scene">
+    <div data-hf-id="hf-s2-bdr" class="zine-border ink" data-layout-ignore></div>
+    <div data-hf-id="hf-s2-hdr" id="s2-header">
+      <p data-hf-id="hf-s2-k" class="kicker ink">02 · XƯỞNG CHẾ TÁC LỤA TƠ TẰM</p>
+      <h2 data-hf-id="hf-s2-h2" id="s2-title">Từ mặt tranh đến thớ lụa.</h2>
+    </div>
+    <div data-hf-id="hf-s2-rb" id="s2-roll-box" data-layout-allow-overflow>
+      <video data-hf-id="hf-s2-vr" id="s2-video-roll" data-layout-allow-overflow src="assets/video/printing-roll.mp4" data-start="3.5333333333" data-duration="4.3333333333" data-media-start="8.6000000000" data-track-index="1" muted playsinline></video>
+    </div>
+    <div data-hf-id="hf-s2-hb" id="s2-head-box" data-layout-allow-overflow>
+      <video data-hf-id="hf-s2-vh" id="s2-video-head" data-layout-allow-overflow src="assets/video/printing-head.mp4" data-start="3.5333333333" data-duration="4.3333333333" data-media-start="2.0000000000" data-track-index="2" muted playsinline></video>
+    </div>
+    <div data-hf-id="hf-s2-mb" id="s2-macro-box" data-layout-allow-overflow>
+      <img data-hf-id="hf-s2-im" id="s2-img-macro" data-layout-allow-overflow src="assets/images/la-vung-song-2-artwork-landscape.jpg" alt="Chi tiết nguyên tác Vùng Sống 2" data-start="3.5" data-duration="4.4">
+    </div>
+    <p data-hf-id="hf-s2-mt" id="s2-macro-tag" data-layout-ignore>ĐỐI CHIẾU SẮC ĐỘ NGUYÊN TÁC</p>
+    <div data-hf-id="hf-s2-dk" id="s2-deck">
+      <p data-hf-id="hf-s2-dm" id="s2-deck-main">Họa tiết chuyển thể chuẩn xác trên lụa Bảo Lộc.</p>
+      <p data-hf-id="hf-s2-ds" id="s2-deck-sub">Giữ trọn chiều sâu sắc chàm và ánh sáng của tranh lụa</p>
+    </div>
+  </section>
+
+  <!-- SCENE 3: STAIRCASE UNFOLD & POLAROID CONTACT STRIP (7.67s - 11.60s) -->
+  <section data-hf-id="hf-s3" id="s3-motion" class="scene">
+    <video data-hf-id="hf-s3-vs" id="s3-video-stairs" data-layout-allow-overflow src="assets/video/la-scarf-03-head-wrap-wide-1080p.mp4" data-start="7.4666666667" data-duration="2.2333333333" data-media-start="1.0000000000" data-track-index="3" muted playsinline></video>
+    <video data-hf-id="hf-s3-vr" id="s3-video-river" data-layout-allow-overflow src="assets/video/la-scarf-05-riverside-unfold-1080p.mp4" data-start="9.3000000000" data-duration="2.5000000000" data-media-start="4.0000000000" data-track-index="4" muted playsinline></video>
+    <div data-hf-id="hf-s3-sh" id="s3-shade" data-layout-ignore></div>
+    <div data-hf-id="hf-s3-cs" id="s3-contact-strip" data-layout-ignore>
+      <img data-hf-id="hf-s3-t1" id="s3-thumb-1" class="strip-thumb" src="assets/images/la-scarf-riverside-front.jpg" alt="Khăn lụa Vùng Sống 2 bên hồ" data-start="7.4" data-duration="4.4">
+      <img data-hf-id="hf-s3-t2" id="s3-thumb-2" class="strip-thumb" src="assets/images/la-scarf-head-wrap-stairs.jpg" alt="Khăn lụa Vùng Sống 2 trên cầu thang" data-start="7.4" data-duration="4.4">
+      <p data-hf-id="hf-s3-sc" id="s3-strip-caption">LOOKBOOK · VÙNG SỐNG 2</p>
+    </div>
+    <div data-hf-id="hf-s3-cc" id="s3-copy-card">
+      <p data-hf-id="hf-s3-k" class="kicker">03 · NHỊP THỞ ĐƯƠNG ĐẠI</p>
+      <h2 data-hf-id="hf-s3-h2" id="s3-title">Khi hội họa<br data-hf-id="hf-br1">bước ra phố thị.</h2>
+      <p data-hf-id="hf-s3-sub" id="s3-sub">Chuyển thể từ một phần nguyên tác Vùng Sống 2</p>
+    </div>
+  </section>
+
+  <!-- SCENE 4: 4-CELL BENTO EDITORIAL MOSAIC (11.60s - 16.47s) -->
+  <section data-hf-id="hf-s4" id="s4-bento" class="scene">
+    <div data-hf-id="hf-s4-bdr" class="zine-border" data-layout-ignore></div>
+    <div data-hf-id="hf-s4-hdr" id="s4-header">
+      <p data-hf-id="hf-s4-k" class="kicker">04 · ĐA DIỆN PHONG CÁCH</p>
+      <h2 data-hf-id="hf-s4-h2" id="s4-heading">Bốn góc nhìn. Một bản sắc.</h2>
+    </div>
+    <div data-hf-id="hf-ba" id="bento-a" class="bento-cell" data-layout-allow-overflow>
+      <video data-hf-id="hf-va" id="bento-video-head" data-layout-allow-overflow src="assets/video/la-scarf-04-head-wrap-closeup-1080p.mp4" data-start="11.4000000000" data-duration="5.2666666667" data-media-start="1.4000000000" data-track-index="5" muted playsinline></video>
+    </div>
+    <div data-hf-id="hf-bb" id="bento-b" class="bento-cell" data-layout-allow-overflow>
+      <img data-hf-id="hf-ib" id="bento-img-sunglasses" data-layout-allow-overflow src="assets/images/la-scarf-shoulder-drape-portrait.jpg" alt="Khăn Vùng Sống 2 phối suit đen và kính râm" data-start="11.4" data-duration="5.3">
+    </div>
+    <div data-hf-id="hf-bc" id="bento-c" class="bento-cell" data-layout-allow-overflow>
+      <img data-hf-id="hf-ic" id="bento-img-back" data-layout-allow-overflow src="assets/images/la-scarf-back-drape-portrait.jpg" alt="Khăn Vùng Sống 2 choàng lưng" data-start="11.4" data-duration="5.3">
+    </div>
+    <div data-hf-id="hf-bd" id="bento-d" class="bento-cell" data-layout-allow-overflow>
+      <video data-hf-id="hf-vd" id="bento-video-shoulder" data-layout-allow-overflow src="assets/video/la-scarf-02-shoulder-drape-1080p.mp4" data-start="11.4000000000" data-duration="5.2666666667" data-media-start="1.2000000000" data-track-index="6" muted playsinline></video>
+    </div>
+    <div data-hf-id="hf-s4-ft" id="s4-footer">
+      <p data-hf-id="hf-s4-tg" id="s4-tags">TRÙM ĐẦU · KHOÁC VAI · CHOÀNG LƯNG · PHỐI SUIT</p>
+      <p data-hf-id="hf-s4-dc" id="s4-desc">Tự do biến tấu trong mọi khoảnh khắc hiện diện.</p>
+    </div>
+  </section>
+
+  <!-- SCENE 5: ROMAN-ARCH LAKESIDE FEATURE (16.47s - 20.40s) -->
+  <section data-hf-id="hf-s5" id="s5-arch" class="scene">
+    <div data-hf-id="hf-s5-bdr" class="zine-border ink" data-layout-ignore></div>
+    <div data-hf-id="hf-s5-hdr" id="s5-header">
+      <p data-hf-id="hf-s5-k" class="kicker ink">05 · CHẤT LIỆU THƯỢNG HẠNG</p>
+      <h2 data-hf-id="hf-s5-h2" id="s5-title">Nghệ thuật để mang theo.</h2>
+    </div>
+    <div data-hf-id="hf-s5-af" id="s5-arch-frame" data-layout-allow-overflow>
+      <video data-hf-id="hf-s5-vl" id="s5-video-lake" data-layout-allow-overflow src="assets/video/la-scarf-06-riverside-portrait-1080p.mp4" data-start="16.2666666667" data-duration="4.3333333333" data-media-start="1.0000000000" data-track-index="7" muted playsinline></video>
+    </div>
+    <div data-hf-id="hf-s5-ic" id="s5-inset-card" data-layout-ignore>
+      <img data-hf-id="hf-s5-ii" id="s5-img-aodai" src="assets/images/la-scarf-shoulder-drape-front.jpg" alt="Khăn lụa Vùng Sống 2" data-start="16.2" data-duration="4.4">
+    </div>
+    <div data-hf-id="hf-s5-sb" id="s5-spec-bar">
+      <p data-hf-id="hf-s5-sm" id="s5-spec-main">100% lụa tơ tằm Bảo Lộc · Satin 16 momme</p>
+      <p data-hf-id="hf-s5-ss" id="s5-spec-sub">Mềm mại, óng ả tự nhiên · Viền khâu thủ công tỉ mỉ</p>
+    </div>
+  </section>
+
+  <!-- SCENE 6: COLLECTOR'S EDITION WINGED FINALE (20.40s - 24.00s) -->
+  <section data-hf-id="hf-s6" id="s6-finale" class="scene">
+    <div data-hf-id="hf-s6-bdr" class="zine-border" data-layout-ignore></div>
+    <p data-hf-id="hf-s6-top" id="s6-topbar">LUMIERE ARTS · THE ART OF SILK</p>
+    <div data-hf-id="hf-s6-wl" id="s6-wing-left" data-layout-allow-overflow>
+      <img data-hf-id="hf-s6-il" id="s6-img-left" data-layout-allow-overflow src="assets/images/la-closing-ao-dai-lakeside-golden-hour.jpg" alt="Áo dài ren trắng bên hồ cùng khăn Vùng Sống 2" data-start="20.2" data-duration="3.8">
+    </div>
+    <div data-hf-id="hf-s6-ca" id="s6-center-arch" data-layout-allow-overflow>
+      <img data-hf-id="hf-s6-ic" id="s6-img-center" data-layout-allow-overflow src="assets/images/la-closing-headscarf-gift-bag.jpg" alt="Khăn Vùng Sống 2 và túi quà nghệ thuật Lumiere Arts" data-start="20.2" data-duration="3.8">
+    </div>
+    <div data-hf-id="hf-s6-wr" id="s6-wing-right" data-layout-allow-overflow>
+      <img data-hf-id="hf-s6-ir" id="s6-img-right" data-layout-allow-overflow src="assets/images/la-closing-black-suit-scarf-shoulders.jpg" alt="Suit đen phối khăn lụa Vùng Sống 2" data-start="20.2" data-duration="3.8">
+    </div>
+    <div data-hf-id="hf-s6-div" id="s6-divider" data-layout-ignore></div>
+    <img data-hf-id="hf-s6-lg" id="s6-logo" src="assets/lumiere-logo-transparent.png" alt="Lumiere Arts" data-start="20.2" data-duration="3.8">
+    <div data-hf-id="hf-s6-bb" id="s6-brand-block">
+      <h2 data-hf-id="hf-s6-bt" id="s6-brand-title">The Art of Silk</h2>
+      <p data-hf-id="hf-s6-bs" id="s6-brand-sub">Vùng Sống 2 · Nguyên tác Nguyễn Văn Trinh</p>
+    </div>
+    <div data-hf-id="hf-s6-ft" id="s6-footer">
+      <span data-hf-id="hf-s6-url">lumierearts.com</span>
+      <span data-hf-id="hf-s6-ed">COLLECTION N° 01</span>
+    </div>
+  </section>
+
+  <audio data-hf-id="hf-music" id="music" src="assets/music/rockot-slow-motion-fashion-ambient.mp3" data-start="0" data-duration="24" data-media-start="6.6" data-volume="0.8" data-track-index="8"></audio>
+</main>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const fps = 30;
+
+// 11 verified percussive attacks in the Rockot excerpt (offset 6.6s, volume 0.8)
+const hits = {
+  s1Lock: 94 / fps,    // 3.133s (measured attack 3.1275s)
+  s2Enter: 112 / fps,  // 3.733s (measured attack 3.7275s)
+  s2Macro: 157 / fps,  // 5.233s (measured attack 5.2425s)
+  s3Enter: 230 / fps,  // 7.667s (measured attack 7.6675s)
+  s3Swap: 285 / fps,   // 9.500s (measured attack 9.4875s)
+  s4Enter: 348 / fps,  // 11.600s (measured attack 11.6075s)
+  s4CellB: 385 / fps,  // 12.833s (measured attack 12.8275s)
+  s4CellC: 421 / fps,  // 14.033s (measured attack 14.0325s)
+  s4CellD: 448 / fps,  // 14.933s (measured attack 14.9425s)
+  s5Enter: 494 / fps,  // 16.467s (measured attack 16.4575s)
+  s6Enter: 612 / fps   // 20.400s (measured attack 20.4025s)
+};
+
+function wipe(id, prev, hit, clip, frames = 12) {
+  const d = frames / fps;
+  const start = hit - d / 2;
+  tl.set(id, { visibility: 'visible' }, start)
+    .fromTo(id, { clipPath: clip }, { clipPath: 'inset(0% 0% 0% 0%)', duration: d, ease: 'sine.inOut' }, start)
+    .set(prev, { visibility: 'hidden' }, hit + d / 2);
+}
+
+// SCENE 1: Dark-Teal Exhibition Poster & 3-Plane Stack
+tl.set('#s1-poster', { visibility: 'visible' }, 0)
+  .from('#s1-topbar, #s1-headline-block', { opacity: 0, y: 18, duration: 0.35, ease: 'power2.out' }, 0.03)
+  .from('#s1-card-left', { opacity: 0, x: -32, y: 20, duration: 0.55, ease: 'power3.out' }, 0.08)
+  .from('#s1-card-right', { opacity: 0, x: 32, y: 28, duration: 0.55, ease: 'power3.out' }, 0.18)
+  .fromTo('#s1-img-visitors', { scale: 1.08 }, { scale: 1.0, duration: 3.7, ease: 'none' }, 0)
+  .fromTo('#s1-img-panels', { scale: 1.08 }, { scale: 1.0, duration: 3.7, ease: 'none' }, 0)
+  .fromTo('#s1-img-painting', { scale: 1.45, x: -60 }, { scale: 1.0, x: 0, duration: hits.s1Lock, ease: 'power3.inOut' }, 0)
+  .from('#s1-meta-bar', { opacity: 0, y: 16, duration: 0.35, ease: 'power2.out' }, 0.14)
+  .to('#s1-topbar, #s1-headline-block, #s1-meta-bar', { opacity: 0, duration: 5 / fps }, hits.s2Enter - 6 / fps);
+
+// SCENE 2: Asymmetric L-Grid Atelier Spread on Frame 112 (3.733s)
+wipe('#s2-atelier', '#s1-poster', hits.s2Enter, 'inset(0% 0% 100% 0%)', 12);
+tl.from('#s2-roll-box', { y: 36, duration: 14 / fps, ease: 'power2.out' }, hits.s2Enter - 4 / fps)
+  .from('#s2-head-box', { x: 28, duration: 14 / fps, ease: 'power2.out' }, hits.s2Enter - 2 / fps)
+  .from('#s2-macro-box, #s2-macro-tag', { y: 28, duration: 14 / fps, ease: 'power2.out' }, hits.s2Enter)
+  .fromTo('#s2-img-macro', { scale: 2.3, x: -55, y: -24 }, { scale: 1.65, x: 35, y: 14, duration: hits.s2Macro - hits.s2Enter, ease: 'power2.inOut' }, hits.s2Enter)
+  .to('#s2-img-macro', { scale: 1.25, x: 0, y: 0, duration: hits.s3Enter - hits.s2Macro, ease: 'sine.inOut' }, hits.s2Macro)
+  .from('#s2-deck', { opacity: 0, y: 18, duration: 12 / fps, ease: 'power2.out' }, hits.s2Enter + 2 / fps)
+  .to('#s2-header, #s2-deck', { opacity: 0, duration: 5 / fps }, hits.s3Enter - 6 / fps);
+
+// SCENE 3: Staircase Unfold & Polaroid Contact Strip on Frame 230 (7.667s)
+wipe('#s3-motion', '#s2-atelier', hits.s3Enter, 'inset(0% 100% 0% 0%)', 12);
+tl.fromTo('#s3-contact-strip', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 12 / fps, ease: 'power2.out' }, hits.s3Enter)
+  .to('#s3-contact-strip', { y: -22, duration: hits.s4Enter - (hits.s3Enter + 12 / fps), ease: 'none' }, hits.s3Enter + 12 / fps)
+  .from('#s3-copy-card', { opacity: 0, y: 24, duration: 12 / fps, ease: 'power2.out' }, hits.s3Enter)
+  .fromTo('#s3-video-river', { clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0% 0 0 0)', duration: 10 / fps, ease: 'sine.inOut' }, hits.s3Swap - 5 / fps)
+  .to('#s3-copy-card', { opacity: 0, duration: 5 / fps }, hits.s4Enter - 6 / fps);
+
+// SCENE 4: 4-Cell Bento Editorial Mosaic on Frame 348 (11.600s)
+wipe('#s4-bento', '#s3-motion', hits.s4Enter, 'inset(100% 0% 0% 0%)', 12);
+tl.fromTo('#bento-b', { clipPath: 'inset(0% 0% 100% 0%)', y: -18 }, { clipPath: 'inset(0% 0% 0% 0%)', y: 0, duration: 10 / fps, ease: 'sine.inOut' }, hits.s4CellB - 5 / fps)
+  .fromTo('#bento-c', { clipPath: 'inset(100% 0% 0% 0%)', y: 18 }, { clipPath: 'inset(0% 0% 0% 0%)', y: 0, duration: 10 / fps, ease: 'sine.inOut' }, hits.s4CellC - 5 / fps)
+  .fromTo('#bento-d', { clipPath: 'inset(0% 100% 0% 0%)', x: 20 }, { clipPath: 'inset(0% 0% 0% 0%)', x: 0, duration: 10 / fps, ease: 'sine.inOut' }, hits.s4CellD - 5 / fps)
+  .fromTo('#bento-img-sunglasses', { scale: 1.07 }, { scale: 1.0, duration: 4.5, ease: 'none' }, hits.s4CellB)
+  .fromTo('#bento-img-back', { scale: 1.07 }, { scale: 1.0, duration: 3.5, ease: 'none' }, hits.s4CellC)
+  .from('#s4-footer', { opacity: 0, y: 18, duration: 12 / fps, ease: 'power2.out' }, hits.s4CellC)
+  .to('#s4-header, #s4-footer', { opacity: 0, duration: 5 / fps }, hits.s5Enter - 6 / fps);
+
+// SCENE 5: Roman-Arch Lakeside Feature on Frame 494 (16.467s)
+wipe('#s5-arch', '#s4-bento', hits.s5Enter, 'inset(0% 0% 100% 0%)', 12);
+tl.from('#s5-arch-frame', { y: 28, scale: 0.96, duration: 14 / fps, ease: 'power2.out' }, hits.s5Enter - 4 / fps)
+  .from('#s5-inset-card', { y: 40, opacity: 0, duration: 14 / fps, ease: 'power2.out' }, hits.s5Enter + 4 / fps)
+  .fromTo('#s5-img-aodai', { scale: 1.08 }, { scale: 1.0, duration: 3.8, ease: 'none' }, hits.s5Enter)
+  .from('#s5-spec-bar', { opacity: 0, y: 18, duration: 12 / fps, ease: 'power2.out' }, hits.s5Enter + 2 / fps)
+  .to('#s5-header, #s5-spec-bar', { opacity: 0, duration: 5 / fps }, hits.s6Enter - 6 / fps);
+
+// SCENE 6: Collector's Edition Winged Finale on Frame 612 (20.400s)
+wipe('#s6-finale', '#s5-arch', hits.s6Enter, 'inset(100% 0% 0% 0%)', 12);
+const cStart = hits.s6Enter - 6 / fps;
+tl.from('#s6-center-arch', { y: 24, duration: 12 / fps, ease: 'power2.out' }, cStart)
+  .from('#s6-wing-left', { x: -24, y: 18, duration: 12 / fps, ease: 'power2.out' }, cStart + 2 / fps)
+  .from('#s6-wing-right', { x: 24, y: 18, duration: 12 / fps, ease: 'power2.out' }, cStart + 2 / fps)
+  .fromTo('#s6-img-center', { scale: 1.04 }, { scale: 1.0, duration: 24 - cStart, ease: 'sine.out' }, cStart)
+  .fromTo('#s6-img-left, #s6-img-right', { scale: 1.04 }, { scale: 1.0, duration: 24 - cStart, ease: 'sine.out' }, cStart)
+  .from('#s6-logo, #s6-brand-block, #s6-footer', { opacity: 0, y: 16, duration: 12 / fps, ease: 'sine.out' }, cStart + 2 / fps)
+  .set({}, {}, 24);
+
+window.__timelines['lumiere-v05'] = tl;
+window.__reviewTiming = { hits };
+</script>
+</body>
+</html>
