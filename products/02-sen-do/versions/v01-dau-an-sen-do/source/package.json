@@ -1,0 +1,12 @@
+{
+  "name": "lumiere-arts-sen-do-v01-dau-an-sen-do",
+  "private": true,
+  "scripts": {
+    "preview": "HYPERFRAMES_NO_TELEMETRY=1 hyperframes preview --background",
+    "check": "HYPERFRAMES_NO_TELEMETRY=1 hyperframes check --json",
+    "render": "HYPERFRAMES_NO_TELEMETRY=1 hyperframes render --fps 30 --quality delivery --workers 2 --video-frame-format png --output ../exports/Lumiere-Arts-02-Sen-Do-V01-36s-1080p.mp4"
+  },
+  "dependencies": {
+    "hyperframes": "0.8.162"
+  }
+}

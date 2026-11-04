@@ -1,0 +1,107 @@
+{
+  "note": "Original client media retained locally and excluded from Git. Working copies are included with each edit.",
+  "assets": [
+    {
+      "path": "assets/originals/2026-11-04/01-artwork/la-thuy-tinh-hoa-16-sen-do-artwork.jpg",
+      "bytes": 1364891,
+      "sha256": "b1452ddcb1cda9b05e3ff2a9f832b1c5da718797adbc0f9231e737a2eb4bd95c",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-04/01-artwork/la-thuy-tinh-hoa-16-sen-do-artwork-pan.mp4",
+      "bytes": 9732216,
+      "sha256": "dd3b0104f1a55decbc33ec9ad71685fb935db3f53bfdadd57f1252c96a31e77a",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-04/01-artwork/sen-do-content-brief.txt",
+      "bytes": 660,
+      "sha256": "8fada2f5bea939a2a540985026384bb947adade620e8b81155718d8aabfc7445",
+      "type": "document"
+    },
+    {
+      "path": "assets/originals/2026-11-04/02-lookbook/la-sen-do-fountain-wide.jpg",
+      "bytes": 432034,
+      "sha256": "3ce8c73ef29c55b3cc3aa0226cbb544b0dc607e8dc65d54bc73fe59c9d6f26a2",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-04/02-lookbook/la-sen-do-gift-bag-teal.jpg",
+      "bytes": 402830,
+      "sha256": "35b46e718c2240320b80e52e3d5363bae08e9687f28e56dd8d1802803bae0f49",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-04/02-lookbook/la-sen-do-scarf-unfold-side.jpg",
+      "bytes": 689951,
+      "sha256": "403f1d856fb4bffe2f6664927098d675a12021088b3204e09ea5222f49e028a0",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-04/02-lookbook/la-sen-do-gift-bag-artwork.jpg",
+      "bytes": 454475,
+      "sha256": "9d2efec59bb4365c346514d5b3382cb207117643a4d9787fa4b321a37644bef6",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-04/02-lookbook/la-sen-do-scarf-unfold-front.jpg",
+      "bytes": 649478,
+      "sha256": "3ccfae4854a5680c4e95397a91b67f15c003b685843daca1844c0b36375b9342",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-04/02-lookbook/la-sen-do-fountain-portrait.jpg",
+      "bytes": 410251,
+      "sha256": "4f7faf727a13c5143db7af2e48deaf6f62d03d4d50cf0c0e0e30c1cb459b025d",
+      "type": "photo"
+    },
+    {
+      "path": "assets/originals/2026-11-04/03-craft/la-sen-do-silk-printing.mp4",
+      "bytes": 12134550,
+      "sha256": "4951204a0f1cad72c6fa5065dd538b315cf0487d6279e6baf8260599eb21f432",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-04/03-craft/la-sen-do-silk-roll-finishing.mp4",
+      "bytes": 8735874,
+      "sha256": "32873cb4b18111ec8d8c7b2e9a0390cf271bc76af9fc53eb188cdfb006efc1bf",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-04/04-video/la-sen-do-01-shoulder-drape-wide-4k.mp4",
+      "bytes": 67254169,
+      "sha256": "3b4e86ecdcaca012e460d89b21cffcb4590976952045d70bc1168c0bd0d43466",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-04/04-video/la-sen-do-02-shoulder-drape-closeup-4k.mp4",
+      "bytes": 67253940,
+      "sha256": "51b37621a5a88c08e28b32b0d198e04badca3bd4161beb9c4065b9e28aa5fcd9",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-04/04-video/la-sen-do-03-headscarf-breeze-4k.mp4",
+      "bytes": 134365341,
+      "sha256": "018fc9682228948a8242db8c457b9d5731ad0576f190e113b75ff42a4c179d18",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-04/04-video/la-sen-do-04-back-drape-unfold-4k.mp4",
+      "bytes": 134364417,
+      "sha256": "a2413bff9c7cb389003fc9ca7c080210da06460dd3ce5bf55696a1324320a44f",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-04/04-video/la-sen-do-05-back-drape-portrait-4k.mp4",
+      "bytes": 67254169,
+      "sha256": "f568e6478b981f4e123ac3c896c93743729a3c598bd523003483c24ebe05bb74",
+      "type": "video"
+    },
+    {
+      "path": "assets/originals/2026-11-04/04-video/reference-v2-r4-preview-540p.mp4",
+      "bytes": 2474755,
+      "sha256": "80803feba3747de1eb5001c0ffce9c965a7018708d5515587f036f4d673b5866",
+      "type": "video"
+    }
+  ]
+}

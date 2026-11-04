@@ -5,7 +5,7 @@ Mỗi sản phẩm có asset, ý tưởng và các phiên bản video riêng. Hi
 | Mã | Sản phẩm | Tình trạng |
 |---|---|---|
 | 01 | [Vùng Sống 2](products/01-vung-song-2/) | V04 Chuyển động liên kết, bản chỉnh 32 giây |
-| 02 | [Chờ tên](products/02-chua-dat-ten/) | Chờ brief và asset |
+| 02 | [Sen Đỏ (Thủy tinh hóa 16)](products/02-sen-do/) | Đã nhận brief và 17 asset gốc (2026-11-04) |
 | 03 | [Chờ tên](products/03-chua-dat-ten/) | Chờ brief và asset |
 | 04 | [Chờ tên](products/04-chua-dat-ten/) | Chờ brief và asset |
 | 05 | [Chờ tên](products/05-chua-dat-ten/) | Chờ brief và asset |

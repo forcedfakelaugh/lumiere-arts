@@ -15,11 +15,11 @@
     },
     {
       "id": "02",
-      "name": null,
-      "path": "products/02-chua-dat-ten",
-      "status": "awaiting-brief-and-assets",
-      "saved_version": null,
-      "review_version": null
+      "name": "Sen Đỏ (Thủy tinh hóa 16)",
+      "path": "products/02-sen-do",
+      "status": "v01-dau-an-sen-do-preview-36s",
+      "saved_version": "v01-dau-an-sen-do",
+      "review_version": "v01-dau-an-sen-do"
     },
     {
       "id": "03",

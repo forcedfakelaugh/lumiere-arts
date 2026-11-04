@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Sen Đỏ · Thủy Tinh Hóa 16 · V01</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+@font-face{font-family:E;src:url('assets/editorial-serif.woff2')}
+@font-face{font-family:C;src:url('assets/cormorant-medium.woff2')}
+*{box-sizing:border-box}
+html,body{margin:0;width:1080px;height:1920px;background:#f1ebdf;overflow:hidden;color:#193e43;font-family:E,serif}
+main,.scene{position:absolute;inset:0;width:1080px;height:1920px;overflow:hidden}
+.scene{visibility:hidden;background:#f1ebdf}
+h1,h2,p{margin:0;font-weight:400}
+.fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,26,28,.88) 0%,rgba(12,26,28,.38) 38%,transparent 62%),linear-gradient(180deg,rgba(12,26,28,.62) 0%,transparent 26%);pointer-events:none}
+.caption{position:absolute;left:72px;right:72px;bottom:250px;font-size:74px;line-height:1.16;color:#fff9ec}
+.small{font-size:39px;line-height:1.45;color:#ead8b8;margin-top:24px}
+.rule{width:116px;height:2px;background:#c8a464;margin:28px 0}
+.kicker{font:500 28px C,serif;letter-spacing:6px;text-transform:uppercase;color:#dfbe84;margin-bottom:18px}
+
+/* Scene 1 & 2: Gold-leaf brushing & release from R4 */
+#gold-release-video{object-position:35% 50%}
+
+/* Scene 3: Artist Signature on gold square */
+#signature{background:#ede6d8;color:#193e43}
+#signature-window{position:absolute;left:72px;top:300px;width:936px;height:1140px;overflow:hidden;border:2px solid rgba(172,144,97,.45);box-shadow:0 24px 52px rgba(15,28,30,.14)}
+#signature-window video{width:100%;height:100%;object-fit:cover;object-position:43% 50%;display:block}
+#signature-copy{position:absolute;left:72px;right:72px;bottom:170px}
+#signature-copy h2{font-size:76px;line-height:1.12;color:#193e43}
+#signature-copy p{font-size:38px;color:#5a4632;margin-top:16px}
+
+/* Scene 4: Shimmering gold-leaf pan on silk painting */
+#art-pan-window{position:absolute;inset:0;overflow:hidden}
+
+/* Scene 5: Full Artwork Reveal (Thủy Tinh Hóa 16) */
+#art{background:#f1ebdf;color:#193e43}
+#art-frame{position:absolute;left:72px;top:490px;width:936px;height:862px;overflow:hidden;border:2px solid rgba(172,144,97,.45);box-shadow:0 22px 48px rgba(15,28,30,.14)}
+#art-image{width:100%;height:100%;object-fit:cover;display:block;transform-origin:58% 42%}
+#art-title{position:absolute;left:72px;right:72px;top:240px}
+#art-title h1{font-size:92px;line-height:1.05;color:#193e43}
+#art-title p{font-size:44px;margin-top:16px;color:#6e2429}
+#art-info{position:absolute;left:72px;right:72px;top:1405px;font-size:42px;line-height:1.45;color:#193e43}
+#art-info .sub{font-size:36px;color:#536466;margin-top:8px}
+
+/* Scene 8: Full-border scarf unfold showcase (stills) */
+#unfold{background:#193e43}
+#unfold-img-2{clip-path:inset(0 0 0 100%)}
+
+/* Scene 9 & 10: Three-panel lookbook triptych expanding to full-screen hero */
+#looks{background:#f1ebdf;color:#193e43}
+#looks-label{position:absolute;left:72px;top:270px;font:500 34px C,serif;letter-spacing:5px;color:#6e2429}
+.frame{position:absolute;top:430px;width:300px;height:1000px;overflow:hidden;border:1px solid rgba(172,144,97,.4)}
+.frame video{width:100%;height:100%;object-fit:cover;display:block}
+#f1{left:72px}
+#f2{left:390px}
+#f3{left:0;top:0;width:1080px;height:1920px;clip-path:inset(430px 72px 490px 708px);will-change:clip-path;border:none}
+#look-back{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:0 0;will-change:transform;object-fit:cover}
+#looks-title{position:absolute;left:72px;right:72px;top:1495px;font-size:82px;line-height:1.12;color:#193e43}
+#looks-sub{position:absolute;left:72px;right:72px;top:1695px;font-size:38px;color:#536466}
+
+#hero{background:transparent;pointer-events:none}
+#hero-portrait{position:absolute;inset:0;width:1080px;height:1920px;object-fit:cover;opacity:0}
+#hero .shade{opacity:0}
+#hero-copy{position:absolute;left:72px;right:72px;bottom:230px;color:#fff9ec}
+#hero-copy h2{font-size:80px;line-height:1.12}
+#hero-copy p{font-size:44px;line-height:1.42}
+
+/* Scene 11: Closing collage */
+#closing{background:#193e43;color:#fff9ec}
+#closing-collage{position:absolute;left:0;top:0;width:1080px;height:1460px;overflow:hidden;background:#193e43}
+.closing-tile{position:absolute;overflow:hidden;border:2px solid rgba(226,201,154,.55);box-shadow:0 18px 40px rgba(5,24,26,.26)}
+.closing-tile img{width:100%;height:100%;object-fit:cover;display:block}
+#closing-look-1{left:28px;top:36px;width:656px;height:1300px;border-radius:36px 140px 36px 96px;z-index:1}
+#closing-look-2{left:700px;top:96px;width:352px;height:616px;border-radius:88px 30px 30px 30px;z-index:2}
+#closing-look-3{left:632px;top:748px;width:420px;height:672px;border-radius:30px 30px 96px 30px;z-index:3}
+#closing::after{content:"";position:absolute;left:72px;right:72px;top:1462px;height:1px;background:linear-gradient(90deg,rgba(226,201,154,.68),rgba(226,201,154,.08))}
+#closing-logo{position:absolute;left:64px;top:1498px;width:356px;filter:brightness(1.8) saturate(.72) drop-shadow(0 0 1px rgba(224,183,86,.45))}
+#closing-copy{position:absolute;left:490px;top:1504px;right:56px}
+#closing-copy h2{font:88px/1.02 C,serif;color:#fff9ec}
+#closing-copy p{font-size:40px;margin-top:22px;color:#e2c99a;line-height:1.3}
+#closing-url{position:absolute;left:72px;top:1832px;font:32px C,serif;letter-spacing:4px;color:#f6f0e5}
+
+#brand-watermark{position:absolute;left:330px;top:20px;width:420px;height:324px;object-fit:contain;z-index:100;opacity:.58;pointer-events:none}
+</style>
+</head>
+<body>
+<main data-hf-id="hf-5ox8" id="film" data-composition-id="lumiere-sen-do-v01" data-width="1080" data-height="1920" data-fps="30" data-start="0" data-duration="36">
+
+  <!-- 1. Gold-leaf brushing (0.0s - 3.833s) -->
+  <section data-hf-id="hf-759v" id="touch" class="scene">
+    <video data-hf-id="hf-8utl" id="brush-video" class="fill clip" src="assets/video/crystallization-detail.mp4" data-start="0" data-duration="3.9" data-media-start="0.65" data-track-index="1" muted playsinline></video>
+    <div data-hf-id="hf-hama" class="shade" data-layout-ignore></div>
+    <div data-hf-id="hf-s44l" id="touch-copy" class="caption">
+      <p data-hf-id="hf-34j9" class="kicker">DẤU ẤN ĐỘC BẢN TRÊN LỤA</p>
+      <h1 data-hf-id="hf-8i98">Từ một<br data-hf-id="hf-x5px">nét chạm vàng.</h1>
+      <p data-hf-id="hf-luxj" class="small">Tác phẩm đầu tiên dát vàng làm điểm nhấn trên nền lụa</p>
+    </div>
+  </section>
+
+  <!-- 2. Gold leaf release (3.833s - 6.333s) -->
+  <section data-hf-id="hf-ktnc" id="gold-release" class="scene">
+    <video data-hf-id="hf-i3rw" id="gold-release-video" class="fill clip" src="assets/video/crystallization-horizontal.mp4" data-start="3.6" data-duration="2.9" data-media-start="0.2" data-track-index="2" muted playsinline></video>
+    <div data-hf-id="hf-1so6" class="shade" data-layout-ignore></div>
+    <div data-hf-id="hf-x644" id="gold-copy" class="caption">
+      <p data-hf-id="hf-h3ke" class="kicker">KỸ THUẬT THỦ CÔNG</p>
+      <h2 data-hf-id="hf-48k7">Ánh vàng quyện vào<br data-hf-id="hf-rsrt">từng thớ lụa.</h2>
+    </div>
+  </section>
+
+  <!-- 3. Artist signature (6.333s - 8.867s) -->
+  <section data-hf-id="hf-8zs4" id="signature" class="scene">
+    <div data-hf-id="hf-dcqv" id="signature-window" data-layout-allow-overflow>
+      <video data-hf-id="hf-4nql" id="signature-video" class="clip" src="assets/video/crystallization-horizontal.mp4" data-start="6.1" data-duration="3.0" data-media-start="40.1" data-track-index="3" muted playsinline></video>
+    </div>
+    <div data-hf-id="hf-xi59" id="signature-copy">
+      <div data-hf-id="hf-a46i" class="rule"></div>
+      <h2 data-hf-id="hf-45wh">Nguyễn Văn Trinh</h2>
+      <p data-hf-id="hf-6boo">DẤU ẤN CỦA NGƯỜI NGHỆ SĨ · THỦY TINH HÓA</p>
+    </div>
+  </section>
+
+  <!-- 4. Artwork gold-leaf detail pan (8.867s - 11.400s) -->
+  <section data-hf-id="hf-da6b" id="art-pan" class="scene">
+    <div data-hf-id="hf-1vh2" id="art-pan-window" data-layout-allow-overflow>
+      <video data-hf-id="hf-g725" id="art-pan-video" class="fill clip" src="assets/video/la-thuy-tinh-hoa-16-sen-do-artwork-pan.mp4" data-start="8.6" data-duration="3.0" data-media-start="25.0" data-track-index="4" muted playsinline></video>
+    </div>
+    <div data-hf-id="hf-26z7" class="shade" data-layout-ignore></div>
+    <div data-hf-id="hf-4c4t" id="art-pan-copy" class="caption">
+      <p data-hf-id="hf-pfow" class="kicker">TÁC PHẨM ĐẶT RIÊNG NHÀ SƯU TẬP</p>
+      <h2 data-hf-id="hf-c6g0">Sắc sen đỏ kết tinh<br data-hf-id="hf-szow">cùng ánh vàng.</h2>
+    </div>
+  </section>
+
+  <!-- 5. Full Artwork Reveal: Thủy Tinh Hóa 16 (11.400s - 16.467s) -->
+  <section data-hf-id="hf-xbmp" id="art" class="scene">
+    <div data-hf-id="hf-85tt" id="art-title">
+      <h1 data-hf-id="hf-vt06">Thủy Tinh Hóa 16</h1>
+      <p data-hf-id="hf-699f">CRYSTALLIZATION 16 · Nguyễn Văn Trinh</p>
+    </div>
+    <div data-hf-id="hf-qqif" id="art-frame" data-layout-allow-overflow>
+      <img data-hf-id="hf-tmfs" id="art-image" src="assets/images/la-thuy-tinh-hoa-16-sen-do-artwork.jpg" alt="Thủy Tinh Hóa 16 — Nguyễn Văn Trinh">
+    </div>
+    <div data-hf-id="hf-ht8l" id="art-info">
+      <p data-hf-id="hf-w0y0">Màu nước &amp; dát vàng trên lụa · 2026</p>
+      <p data-hf-id="hf-ji77" class="sub">Bức thứ 16 thuộc bộ sưu tập Thủy Tinh Hóa</p>
+      <div data-hf-id="hf-ya9a" class="rule"></div>
+      <p data-hf-id="hf-3i5o">Từ bức tranh sen đỏ độc bản đến thiết kế khăn lụa full viền.</p>
+    </div>
+  </section>
+
+  <!-- 6. Silk Printing Head (16.467s - 18.967s) -->
+  <section data-hf-id="hf-yjrc" id="print1" class="scene">
+    <video data-hf-id="hf-0ntr" id="print-head" class="fill clip" src="assets/video/printing-head.mp4" data-start="16.2" data-duration="3.0" data-media-start="18.0" data-track-index="5" muted playsinline></video>
+    <div data-hf-id="hf-2la8" class="shade" data-layout-ignore></div>
+    <div data-hf-id="hf-auyg" id="print1-copy" class="caption">
+      <p data-hf-id="hf-x6ug" class="kicker">CHẾ TÁC TRÊN LỤA</p>
+      <h2 data-hf-id="hf-vuef">Từ nguyên tác hội họa…</h2>
+      <p data-hf-id="hf-9h5f" class="small">Chuyển thể trọn vẹn bố cục lên mẫu khăn sen đỏ full viền</p>
+    </div>
+  </section>
+
+  <!-- 7. Silk Roll Finishing (18.967s - 21.500s) -->
+  <section data-hf-id="hf-77n7" id="print2" class="scene">
+    <video data-hf-id="hf-2jfe" id="print-roll" class="fill clip" src="assets/video/printing-roll.mp4" data-start="18.7" data-duration="3.0" data-media-start="4.0" data-track-index="6" muted playsinline></video>
+    <div data-hf-id="hf-zt51" class="shade" data-layout-ignore></div>
+    <div data-hf-id="hf-tsd9" id="print2-copy" class="caption">
+      <h2 data-hf-id="hf-lb0c">…đến từng thước lụa<br data-hf-id="hf-sldv">óng ả, sắc nét.</h2>
+    </div>
+  </section>
+
+  <!-- 8. Full-border Sen Đỏ Scarf Unfold (21.500s - 23.900s) -->
+  <section data-hf-id="hf-x7pi" id="unfold" class="scene">
+    <img data-hf-id="hf-hgmu" id="unfold-img-1" class="fill" src="assets/images/la-sen-do-scarf-unfold-front.jpg" alt="Mẫu khăn Sen Đỏ full viền">
+    <img data-hf-id="hf-lhmb" id="unfold-img-2" class="fill" src="assets/images/la-sen-do-scarf-unfold-side.jpg" alt="Mẫu khăn Sen Đỏ full viền góc nghiêng">
+    <div data-hf-id="hf-07g2" class="shade" data-layout-ignore></div>
+    <div data-hf-id="hf-oa5y" id="unfold-copy" class="caption">
+      <p data-hf-id="hf-3bb2" class="kicker">THIẾT KẾ KHĂN LỤA FULL VIỀN</p>
+      <h2 data-hf-id="hf-n9il">Sen Đỏ Full Viền.</h2>
+      <p data-hf-id="hf-2nhh" class="small">Giữ trọn thần thái và đường nét Thủy Tinh Hóa 16</p>
+    </div>
+  </section>
+
+  <!-- 9. Multi-look Triptych & Expansion (23.900s - 31.600s) -->
+  <section data-hf-id="hf-3f2e" id="looks" class="scene">
+    <p data-hf-id="hf-wptt" id="looks-label">SEN ĐỎ · THỦY TINH HÓA 16</p>
+    <div data-hf-id="hf-9r8m" id="f1" class="frame">
+      <video data-hf-id="hf-40yn" id="look-head" class="clip" src="assets/video/la-sen-do-03-headscarf-breeze-1080p.mp4" data-start="23.7" data-duration="8.1" data-media-start="1.0" data-track-index="7" muted playsinline></video>
+    </div>
+    <div data-hf-id="hf-5t4l" id="f2" class="frame">
+      <video data-hf-id="hf-di75" id="look-shoulder" class="clip" src="assets/video/la-sen-do-02-shoulder-drape-closeup-1080p.mp4" data-start="24.4" data-duration="5.3" data-media-start="0.2" data-track-index="8" muted playsinline></video>
+    </div>
+    <div data-hf-id="hf-51gs" id="f3" class="frame">
+      <video data-hf-id="hf-swrw" id="look-back" class="clip" data-layout-allow-overflow src="assets/video/la-sen-do-04-back-drape-unfold-1080p.mp4" data-start="25.0" data-duration="6.8" data-media-start="1.2" data-track-index="9" muted playsinline></video>
+    </div>
+    <h2 data-hf-id="hf-5wlm" id="looks-title">Nhiều diện mạo<br data-hf-id="hf-qluq">thanh lịch.</h2>
+    <p data-hf-id="hf-xo5d" id="looks-sub">Khoác vai · Trùm đầu · Điểm nhấn quý phái</p>
+  </section>
+
+  <!-- 10. Full-screen Hero Overlay & Over-the-shoulder Cut (27.200s - 31.600s) -->
+  <section data-hf-id="hf-3m9u" id="hero" class="scene">
+    <video data-hf-id="hf-hxkm" id="hero-portrait" class="clip" src="assets/video/la-sen-do-05-back-drape-portrait-1080p.mp4" data-start="29.1" data-duration="2.8" data-media-start="0.4" data-track-index="10" muted playsinline></video>
+    <div data-hf-id="hf-0lr3" class="shade" data-layout-ignore></div>
+    <div data-hf-id="hf-vp5h" id="hero-copy">
+      <p data-hf-id="hf-f0tl" class="kicker">LUMIERE ARTS</p>
+      <h2 data-hf-id="hf-od9u">Nghệ thuật<br data-hf-id="hf-q7jp">để mang theo.</h2>
+      <div data-hf-id="hf-yokb" class="rule"></div>
+      <p data-hf-id="hf-bup4">Khăn lụa tơ tằm cao cấp · Thiết kế Sen Đỏ full viền</p>
+    </div>
+  </section>
+
+  <!-- 11. Closing Branded Collage (31.600s - 36.000s) -->
+  <section data-hf-id="hf-70mv" id="closing" class="scene">
+    <div data-hf-id="hf-0zw2" id="closing-collage" aria-label="Bộ sưu tập khăn lụa Sen Đỏ Thủy Tinh Hóa 16">
+      <div data-hf-id="hf-axxh" id="closing-look-1" class="closing-tile">
+        <img data-hf-id="hf-3oh6" id="closing-image-1" src="assets/images/la-sen-do-fountain-portrait.jpg" alt="Mẫu diện khăn lụa Sen Đỏ cùng suit đen">
+      </div>
+      <div data-hf-id="hf-ew1i" id="closing-look-2" class="closing-tile">
+        <img data-hf-id="hf-mlbo" id="closing-image-2" src="assets/images/la-sen-do-gift-bag-teal.jpg" alt="Khăn lụa Sen Đỏ và túi quà Lumiere Arts">
+      </div>
+      <div data-hf-id="hf-iu5j" id="closing-look-3" class="closing-tile">
+        <img data-hf-id="hf-9cv0" id="closing-image-3" src="assets/images/la-sen-do-gift-bag-artwork.jpg" alt="Khăn lụa Sen Đỏ và hộp quà nghệ thuật">
+      </div>
+    </div>
+    <img data-hf-id="hf-5h29" id="closing-logo" src="assets/lumiere-logo-transparent.png" alt="Lumiere Arts">
+    <div data-hf-id="hf-2h8o" id="closing-copy">
+      <h2 data-hf-id="hf-mv8v">The Art<br data-hf-id="hf-regs">of Silk</h2>
+      <p data-hf-id="hf-rpld">Thủy Tinh Hóa 16 · Sen Đỏ</p>
+    </div>
+    <p data-hf-id="hf-89yv" id="closing-url">lumierearts.com</p>
+  </section>
+
+  <!-- Persistent brand watermark before closing card -->
+  <img data-hf-id="hf-owqq" id="brand-watermark" class="clip" src="assets/lumiere-logo-transparent.png" alt="Lumiere Arts" data-start="0" data-duration="36">
+
+  <!-- Background Music: penguinmusic - Lazy Day Stylish Futuristic Chill -->
+  <audio data-hf-id="hf-k57n" id="music" class="clip" src="assets/music/penguinmusic-lazy-day-stylish-futuristic-chill-239287.mp3" data-start="0" data-duration="36" data-media-start="0" data-volume="0.85" data-fade-in="0.2" data-fade-out="1.5" data-track-index="11"></audio>
+</main>
+
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const fps = 30;
+
+// Beat-locked transition map (95 BPM grid measured from penguinmusic track)
+const hits = {
+  goldRelease: 115 / fps, // 3.833s
+  signature:   190 / fps, // 6.333s
+  artPan:      266 / fps, // 8.867s
+  artFull:     342 / fps, // 11.400s
+  artReveal:   396 / fps, // 13.200s
+  print1:      494 / fps, // 16.467s
+  print2:      569 / fps, // 18.967s (main beat drop)
+  unfold:      645 / fps, // 21.500s
+  unfold2:     674 / fps, // 22.467s
+  looks:       717 / fps, // 23.900s
+  panel2:      740 / fps, // 24.667s
+  panel3:      759 / fps, // 25.300s
+  heroExpand:  816 / fps, // 27.200s
+  heroCut:     882 / fps, // 29.400s
+  closing:     948 / fps  // 31.600s
+};
+
+const panelScale = 1000 / 1920;
+const panelX = 708 - (1080 * panelScale - 300) / 2;
+
+function cut(id, prev, t) {
+  tl.set(id, { visibility: 'visible', clipPath: 'inset(0% 0% 0% 0%)' }, t)
+    .set(prev, { visibility: 'hidden' }, t);
+}
+
+function wipe(id, prev, hit, clip, frames = 12) {
+  const d = frames / fps;
+  const start = hit - d / 2;
+  tl.set(id, { visibility: 'visible' }, start)
+    .fromTo(id, { clipPath: clip }, { clipPath: 'inset(0% 0% 0% 0%)', duration: d, ease: 'sine.inOut' }, start)
+    .set(prev, { visibility: 'hidden' }, hit + d / 2);
+}
+
+// 1. Touch (0 - 3.833s)
+tl.set('#touch', { visibility: 'visible' }, 0)
+  .set('#look-back', { scale: panelScale, x: panelX, y: 430 }, 0)
+  .fromTo('#brush-video', { scale: 1.02 }, { scale: 1.06, duration: hits.goldRelease, ease: 'none' }, 0)
+  .from('#touch-copy', { opacity: 0, y: 22, duration: 0.45, ease: 'power2.out' }, 0.2);
+
+// 2. Gold release (3.833s - 6.333s)
+wipe('#gold-release', '#touch', hits.goldRelease, 'inset(0% 0% 0% 100%)', 10);
+tl.fromTo('#gold-release-video', { scale: 1.02 }, { scale: 1.06, duration: hits.signature - hits.goldRelease, ease: 'none' }, hits.goldRelease)
+  .from('#gold-copy', { opacity: 0, y: 20, duration: 0.35, ease: 'power2.out' }, hits.goldRelease + 0.1);
+
+// 3. Signature (6.333s - 8.867s)
+cut('#signature', '#gold-release', hits.signature);
+tl.fromTo('#signature-window', { scale: 1.04, y: 16 }, { scale: 1, y: 0, duration: 0.5, ease: 'power2.out' }, hits.signature)
+  .from('#signature-copy', { opacity: 0, y: 18, duration: 0.4, ease: 'power2.out' }, hits.signature + 0.12);
+
+// 4. Artwork gold detail pan (8.867s - 11.400s)
+wipe('#art-pan', '#signature', hits.artPan, 'inset(100% 0% 0% 0%)', 10);
+tl.fromTo('#art-pan-video', { scale: 1.03 }, { scale: 1.08, duration: hits.artFull - hits.artPan, ease: 'none' }, hits.artPan)
+  .from('#art-pan-copy', { opacity: 0, y: 20, duration: 0.35, ease: 'power2.out' }, hits.artPan + 0.1);
+
+// 5. Full Artwork Reveal: Thủy Tinh Hóa 16 (11.400s - 16.467s)
+cut('#art', '#art-pan', hits.artFull);
+tl.fromTo('#art-image', { scale: 2.35 }, { scale: 1, duration: hits.artReveal - hits.artFull, ease: 'power2.inOut' }, hits.artFull)
+  .from('#art-title', { opacity: 0, y: -18, duration: 0.45, ease: 'power2.out' }, hits.artFull + 0.15)
+  .from('#art-info', { opacity: 0, y: 22, duration: 0.45, ease: 'power2.out' }, hits.artReveal - 0.15);
+
+// 6. Silk Printing Head (16.467s - 18.967s)
+wipe('#print1', '#art', hits.print1, 'inset(0% 0% 0% 100%)', 10);
+tl.from('#print1-copy', { opacity: 0, y: 20, duration: 0.35, ease: 'power2.out' }, hits.print1 + 0.08);
+
+// 7. Silk Roll Finishing on Beat Drop (18.967s - 21.500s)
+wipe('#print2', '#print1', hits.print2, 'inset(0% 0% 100% 0%)', 10);
+tl.from('#print2-copy', { opacity: 0, y: 20, duration: 0.35, ease: 'power2.out' }, hits.print2 + 0.08);
+
+// 8. Full-border Scarf Unfold (21.500s - 23.900s)
+wipe('#unfold', '#print2', hits.unfold, 'inset(0% 100% 0% 0%)', 10);
+tl.fromTo('#unfold-img-1', { scale: 1.05 }, { scale: 1, duration: hits.looks - hits.unfold, ease: 'none' }, hits.unfold)
+  .to('#unfold-img-2', { clipPath: 'inset(0 0 0 0%)', duration: 10 / fps, ease: 'sine.inOut' }, hits.unfold2 - 5 / fps)
+  .fromTo('#unfold-img-2', { scale: 1.04 }, { scale: 1, duration: hits.looks - hits.unfold2 + 0.2, ease: 'none' }, hits.unfold2 - 5 / fps)
+  .from('#unfold-copy', { opacity: 0, y: 22, duration: 0.35, ease: 'power2.out' }, hits.unfold + 0.08);
+
+// 9. Three-Panel Lookbook Triptych (23.900s - 27.200s)
+wipe('#looks', '#unfold', hits.looks, 'inset(0% 0% 100% 0%)', 10);
+tl.fromTo('#f2', { clipPath: 'inset(100% 0% 0% 0%)', y: 24 }, { clipPath: 'inset(0% 0% 0% 0%)', y: 0, duration: 10 / fps, ease: 'sine.inOut' }, hits.panel2 - 5 / fps)
+  .fromTo('#f3', { clipPath: 'inset(1430px 72px 490px 708px)' }, { clipPath: 'inset(430px 72px 490px 708px)', duration: 10 / fps, ease: 'sine.inOut' }, hits.panel3 - 5 / fps)
+  .from('#looks-title,#looks-sub', { opacity: 0, y: 20, duration: 12 / fps, ease: 'power2.out' }, hits.panel3 - 4 / fps);
+
+// 10. Expand Right Panel to Fullscreen Hero + Over-the-Shoulder Cut (27.200s - 31.600s)
+const expandDur = 28 / fps;
+tl.to('#looks-title,#looks-sub,#looks-label', { opacity: 0, duration: 10 / fps }, hits.heroExpand - 8 / fps)
+  .set('#f3', { zIndex: 5 }, hits.heroExpand - 6 / fps)
+  .to('#f3', { clipPath: 'inset(0px 0px 0px 0px)', duration: expandDur, ease: 'power2.inOut' }, hits.heroExpand - 6 / fps)
+  .to('#look-back', { scale: 1, x: 0, y: 0, duration: expandDur, ease: 'power2.inOut' }, hits.heroExpand - 6 / fps)
+  .to('#f1,#f2', { opacity: 0, duration: 14 / fps, ease: 'sine.inOut' }, hits.heroExpand - 6 / fps)
+  .set('#hero', { visibility: 'visible' }, hits.heroExpand - 6 / fps)
+  .to('#hero .shade', { opacity: 1, duration: expandDur, ease: 'sine.inOut' }, hits.heroExpand - 6 / fps)
+  .from('#hero-copy', { opacity: 0, y: 24, duration: 16 / fps, ease: 'power2.out' }, hits.heroExpand + 6 / fps)
+  .to('#hero-portrait', { opacity: 1, duration: 8 / fps, ease: 'sine.inOut' }, hits.heroCut - 4 / fps);
+
+// 11. Closing Branded Collage (31.600s - 36.000s)
+const closingStart = hits.closing - 6 / fps;
+const closingEnd = hits.closing + 6 / fps;
+wipe('#closing', '#hero', hits.closing, 'inset(100% 0% 0% 0%)', 12);
+tl.to('#brand-watermark', { opacity: 0, duration: 6 / fps, ease: 'none' }, closingStart)
+  .to('#hero-copy', { opacity: 0, duration: 6 / fps, ease: 'sine.inOut' }, closingStart)
+  .set('#looks', { visibility: 'hidden' }, closingEnd)
+  .from('#closing-look-1', { y: 18, duration: 10 / fps, ease: 'sine.out' }, closingStart)
+  .from('#closing-look-2', { y: 24, duration: 10 / fps, ease: 'sine.out' }, closingStart + 2 / fps)
+  .from('#closing-look-3', { y: 30, duration: 10 / fps, ease: 'sine.out' }, closingStart + 4 / fps)
+  .from('#closing-copy,#closing-url,#closing-logo', { opacity: 0, y: 16, duration: 12 / fps, ease: 'sine.out' }, closingStart + 2 / fps)
+  .set({}, {}, 36);
+
+window.__timelines['lumiere-sen-do-v01'] = tl;
+window.__reviewTiming = { hits, panelScale, panelX };
+</script>
+</body>
+</html>
