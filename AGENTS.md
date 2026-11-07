@@ -13,11 +13,23 @@ Read README.md for repo layout. This file is the fast path and the known gotchas
 ## Gotchas (each cost real time)
 - Sony 4K clips (C00xx.MP4) are PORTRAIT via rotation metadata: ffprobe says 3840x2160, ffmpeg auto-rotates to 2160x3840. Cut with plain `scale=1080:1920`, never a landscape crop.
 - Shell is zsh: `for p in "a b"` does not word-split; use `a:b` pairs with `${p%%:*}`. Don't name shell functions `g` (alias clash).
-- Pixabay blocks curl (Cloudflare). incompetech MP3s download directly (CC BY 4.0 → credit required in post caption). HeyGen music needs `npx hyperframes auth login` (not signed in).
+- Pixabay pages block curl (Cloudflare), but its CDN does not: find the track in Chrome (claude-in-chrome), `fetch()` the track page in-page, regex the `cdn.pixabay.com/download/audio/...mp3?filename=...` URL, then curl that URL with a browser User-Agent and `-e https://pixabay.com/`. incompetech MP3s download directly (CC BY 4.0 → credit required in post caption). HeyGen music needs `npx hyperframes auth login` (not signed in).
+- Content ID: the user does NOT want Pixabay tracks marked "Content ID Registered" (allowed by licence but auto-flagged on YouTube/Facebook). Check the track page HTML for the text `Content ID Registered` and skip any that have it.
 - Beat grid: `npx hyperframes audio <mp3> --only bpm,downbeats,sections --json`; start the `<audio>` at a downbeat via `data-media-start` so film t=0 is beat 1.
 - Lint warnings `timeline_track_too_dense` / `nested_structure_needs_subcomposition` are expected with the repo's single-file index.html convention.
 - Bright riverside/white-column footage kills text contrast: always put a gradient `.shade` clip under copy.
 - Never commit renders (`exports/`, `renders/`) or `assets/originals/`.
+
+## Music library (`shared/music/`, all free, no Content ID)
+User shortlisted these for 03 Thủy tinh hóa 14 (artistic, not generic fashion-ad, not old classical piano). Copy the chosen file into the version's `source/assets/music/`.
+- `rockot-slow-motion-fashion-ambient-173505.mp3` — ambient/spacious, 1:47 (user's top pick in the brief: painting first, then silk and model)
+- `rockot-eona-emotional-ambient-pop-351436.mp3` — ambient pop, 123 BPM, 2:32
+- `rockot-chillout-soul-174805.mp3` — downtempo, 90 BPM, 1:29
+- `kulakovka-luxury-life-620531.mp3` — luxury house, 120 BPM, 2:44
+- `kulakovka-ambient-house-624653.mp3` — ambient house, 118 BPM, 2:47
+- `prettyjohn1-fashion-507165.mp3` — soft house/runway, 118 BPM, 2:19
+- Rejected (Content ID registered, deleted): Coma-Media "Sculpted Light", Sonican "Elegant Chill", WaveMaster "Fashion", penguinmusic "Elegant Abstract".
+BPM values are from `hyperframes audio --only bpm` (signal-based, verify downbeats before cutting).
 
 ## Music already used
 - 01 Vùng Sống 2: Rockot "Slow Motion Fashion Ambient", penguinmusic "Lazy Day" (Pixabay)
