@@ -20,6 +20,14 @@ Read README.md for repo layout. This file is the fast path and the known gotchas
 - Bright riverside/white-column footage kills text contrast: always put a gradient `.shade` clip under copy.
 - Never commit renders (`exports/`, `renders/`) or `assets/originals/`.
 
+## herk-edit-kit tools (`shared/tools/herk-edit-kit/`, see its README)
+- Beat phase: run `music-grid.mjs <mp3> --bpm N` and use the **kick-band phase** as `data-media-start`. The full-band phase can lock onto hi-hats and put every cut half a beat late. Cross-check against `hyperframes audio` downbeats.
+- Fitting a track to the film length: `splice-music.mjs --segments` joins beat ranges on the grid, `--gap` adds a half-beat duck before the drop, `--fade` adds the tail. Re-measure the result (kick phase should be about 0).
+- Loudness: `mix.mjs` normalises to -14 LUFS. HyperFrames re-encodes audio slightly quieter, so remux the master after rendering: `ffmpeg -i render.mp4 -i master.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest final.mp4`.
+- QA on the render: `analyze-reference.mjs render.mp4 ../qa/rhythm --bpm N --phase 0` (cuts within about 35 ms of a beat). Also pull 10-frame strips across each transition, because snapshots miss stuck or ghost layers: `ffmpeg -i render.mp4 -vf "select='between(n\,440\,449)',scale=384:-1,tile=layout=5x2" -frames:v 1 -fps_mode passthrough strip.png`.
+- Contrast: `contrast-report.mjs <source-dir>` replaces eyeballing text over bright footage (needs `@hyperframes/producer` installed).
+- GSAP habits from the kit: tween only transform and opacity. A layer animated by several tweens (a shared flash) can stick on a backward seek, so compute it in a per-frame driver instead. Don't put `<video data-start>` inside a timed `.clip`. `background-clip:text` renders invisible in capture.
+
 ## Music library (`shared/music/`, all free, no Content ID)
 User shortlisted these for 03 Thủy tinh hóa 14 (artistic, not generic fashion-ad, not old classical piano). Copy the chosen file into the version's `source/assets/music/`.
 - `rockot-slow-motion-fashion-ambient-173505.mp3` — ambient/spacious, 1:47 (user's top pick in the brief: painting first, then silk and model)
